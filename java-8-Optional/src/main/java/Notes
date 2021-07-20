@@ -1,0 +1,27 @@
+Notes:
+
+# REQUIRED
+- Default value for optional ----- Optional.empty()
+- Pick the value from optional if present else set optional.empty ----- Optional.ofNullable(Parameter) [BEST PRACTICE]
+- filter, map, flatMap internally handle optional so optional<> declaration of variable wont be required
+- map works if it is one-to-one relationship whereas flatMap on works for one-to-many relationship for collections
+- map on Optional when defined need to sent orElse result on each parent & child optional but for flap map parent optional only defines orElse condition
+
+# NOT REQUIRED
+- Dont call get() on optional<> else it will throw "No Such Element Exception". It must be used in conjunction with ifPresent() 
+- Dont call of() on non-optional type else it will throw "Null Pointer Exception". It must be used in only if it is NOT-NULL value or OPTIONAL value
+- Don't use PRIMITIVE OPTIONAL like OPTIONALINT, OPTIONALDOUBLE as they cannot be used with utility methods like map, flatMap, filter
+- Don't use OPTIONAL as replacement to IF-ELSE condition
+- Don't use Optional in ENTITY, MODEL as optional are not serializable. It cannot be used in API as well
+
+# IMPORTANT
+- Special map(result -> result) --> Unary Operator
+optionalResult.map(result -> result).orElse(0)
+
+**** Example of Map vs FlatMap *****
+> Map [For each result, we can provide one 'orElse' condition]
+- optionalPerson.map(person -> optionalCar.map(car -> findResult(person, car)).orElse("Car Empty"))
+                .orElse("Person Empty")
+
+> FlatMap [For each result, we can provide only one 'orElse' condition]
+- optionalPerson.flatMap(person -> optionalCar.map(car -> findResult(person, car))).orElse("Empty")

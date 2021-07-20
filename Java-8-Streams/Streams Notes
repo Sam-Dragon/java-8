@@ -1,0 +1,19 @@
+# Filtering And Slicing
+
+- Streams are nothing but the data received from the source on which we can perform 
+data processing operations
+> Streams in java8 meant to work on Collections unlike in java7 which works on files
+> Streams don't add or remove elements the data from the actual collection
+> Streams operations are similar to database operations
+> Streams performs internal iteration
+> Streams are classified into Sequencial Streams & Parallel Streams
+> Streams once traversed cannot be re-traversed else it will throw exception
+
+# Advantages
+> Declarative - More concise and readable
+> Composable - More Flexible
+> Parallelizable - Better Performance
+
+# Creating Streams
+1. Stream.of
+2. Arrays.stream
