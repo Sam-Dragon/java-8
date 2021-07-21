@@ -71,6 +71,11 @@ public class Employee {
 
     public static List<Employee> employeeList() {
         return new ArrayList<Employee>() {
+            /**
+             * 
+             */
+            private static final long serialVersionUID = 1L;
+
             {
                 add(new Employee(6L, "Sam", "+919663374604", BigDecimal.valueOf(35000)));
                 add(new Employee(7L, "Dragon", "+918770133516", BigDecimal.valueOf(45000)));

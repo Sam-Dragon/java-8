@@ -1,0 +1,13 @@
+# POINTS
+
+1. Difference b/w Streams vs Collections
+- Collections which contains the actual data whereas
+Streams can only process the collection data
+- Collections can add or remove elements whereas
+Streams cannot add or remove elements [Fixed Data Structure]
+- Collections can be traverse multiple times using normal operations like forEach whereas
+Streams can traverse the collection data only once
+- Collections are eagerly loaded or constructed whereas
+Streams are lazy loaded or constructed collection
+- Collections performs external iterations whereas
+Streams performs internal iterations
