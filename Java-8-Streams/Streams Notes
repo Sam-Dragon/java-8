@@ -1,4 +1,4 @@
-# Streams
+****************************************** JAVA-8 STREAMS *****************************************
 
 > Streams are sequence of elements from a source that supports data processing operations
   - sequence of elements : It will be elements of the specific type like LinkedList, HashSet etc..
