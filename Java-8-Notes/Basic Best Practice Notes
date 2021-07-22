@@ -1,0 +1,11 @@
+# Best Practices
+
+1. Interface Default & Static Methods
+> In order to add new method to the existing interface, Java 8 provides two ways
+    - Default Methods [Object]
+    - Static Methods [Class]
+> For default methods, multiple inheritance issue can come. So follow the
+resolution rules for multiple inheritance
+> For static methods, we can define as many as we want
+
+2.     

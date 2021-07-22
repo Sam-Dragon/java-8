@@ -1,0 +1,56 @@
+********************************** POINTS **********************************
+
+# Default Methods [Defender Methods]
+
+1. Definition
+> Default methods allows library developers to add concrete implementation to the interface
+without effecting the actual implementation class & is applicable on objects
+Ex - sort() in List interface & stream() in Collection interface
+
+2. default methods in interface must be declared with 'default' keyword on methods and methods 
+must have body [package default_method_lamda.pack]
+
+# Resolution Rules [Multiple Inheritance] - Default Methods
+
+1. Extended Class win over interface [package multiple_inheritance.resoultion_rule_1.pack]
+- Implemented interfaces can or cannot be under inheritance
+- Extended class must extend to any interface with has same default method
+- We need to @override the default method and call its default method of interface
+
+2. Sub-Interface win over interface [package multiple_inheritance.resoultion_rule_2.pack]
+- Implemented interfaces must be under inheritance
+- Extended class will be checked first but not its implemented interface
+- Main Class implemented interface will be checked next
+
+3. When two interfaces define same default method [package multiple_inheritance.resoultion_rule_3.pack]
+- Interface implemented must not be in inheritance else Rule 2 will be applied
+- Main Class must override the default method and call the interface method using
+interface_name.super.method_name;
+
+#. Diamond Problem Of Death [package multiple_inheritance.diamond_problem.pack]
+- It happens on default methods where a class access multiple interfaces which specifies common
+default method
+- Solution : Rule 3 is the solution
+
+N.) Advantage
+- It supports backward compatibility by maintain old implementation & allows to add new 
+implementation to the interface without effecting its related implementation class
+- It is also useful in making optional methods if not in usage 
+i.e. remove method in Iterator interface
+
+
+# Static Methods [package default_static_method.pack]
+
+1. Definition
+> Static methods allows library developers to add concrete implementation to the interface
+without effecting the actual implementation class & is applicable on class
+Ex - copyOf() in List Interface & comparing() in Comparator interface
+
+2. static methods in interface must be declared with 'static' keyword on methods and methods 
+must have body
+
+N.) Advantage
+- It supports backward compatibility by maintain old implementation & allows to add new 
+implementation to the interface without effecting its related implementation class
+
+# No Resolution Rules [Multiple Inheritance] - Static Methods

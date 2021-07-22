@@ -1,0 +1,17 @@
+# POINTS
+
+# Collector
+- It is interface
+
+# Collectors
+- It is final class
+
+# Collectors Methods
+1. Collectors.joining
+- It is used to joining the result. By Default, join happens with blank
+- Ensure joining happens on single column or field
+
+2. Collectors.counting
+- It is used for counting the number of records
+
+3. 
