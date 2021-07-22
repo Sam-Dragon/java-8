@@ -1,4 +1,5 @@
-# POINTS
+******************************************* FUNCTION ***********************************************
+[package function_interface.pack]
 
 1. Function accepts Target type but results can be same/different Target type
 2. Function operations
@@ -15,14 +16,15 @@
 
 # Primitive Specialization 
 1. Prevents boxing of primitives & provides better performance
-2. Remember that primitive specialization doesnt required any target type to be specified 
-3. operator supports
+2. Remember that primitive specialization doesn't required any target type to be specified 
+3. Function supports
     - IntFunction, LongFunction, DoubleFunction, IntToLongFunction, IntToDoubleFunction,
-      LongToIntFunction, LongToDoubleFunction, ToIntFunction , ToLongFunction, ToDoubleFunction   
+      LongToIntFunction, LongToDoubleFunction, ToIntFunction , ToLongFunction, ToDoubleFunction 
+4. BiFunction supports  
     - ToIntBiFunction, ToLongBiFunction, ToDoubleBiFunction 
 
 # Issues
 1. Function<void> & BiFunction<void> doesn't work
 
-Note : Always mark the custom functional  interface with @FunctionalInterface annotation 
-for safety purpose
+Note : Always mark the custom functional interface with @FunctionalInterface annotation for safety 
+purpose

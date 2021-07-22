@@ -1,4 +1,5 @@
-# POINTS
+*************************************** METHOD INTERFACE ******************************************
+[package method_references.pack]
 
 1. Definition
 - Shorthand for lamdas calling only a specific method
@@ -11,13 +12,16 @@
 3. Method references can be done for static method, instance method or any other method
 4. Constructor references can also be done
 
-. Advantages
+#. Advantages
     > Less verbose
     > Code re-usability
     > Better readability
+
+#. DisAdvantages
+    > Method references cannot be used directly on System.out.print() method because there are no
+      overloaded version provided
 
 # Question
 1. How to call method reference for parameterized constructor of Employee
     - Create interface which accepts same parameter as of Employee object
     - Use the interface to input the data
-2. 

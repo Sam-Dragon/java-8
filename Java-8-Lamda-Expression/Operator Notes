@@ -1,4 +1,5 @@
-# POINTS
+******************************************* OPERATOR **********************************************
+[package operator_interface.pack]
 
 1. UnaryOperator accepts Target type but results always same Target type
 2. UnaryOperator operations
@@ -26,5 +27,5 @@
 # Issues
 1. UnaryOperator<void> & BinaryOperator<void> doesn't work
 
-Note : Always mark the custom functional  interface with @FunctionalInterface annotation 
-for safety purpose
+Note : Always mark the custom functional interface with @FunctionalInterface annotation for safety 
+purpose

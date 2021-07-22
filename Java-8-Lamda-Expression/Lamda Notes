@@ -1,4 +1,5 @@
-# POINTS
+**************************************** LAMDA EXPRESSION ******************************************
+[package lamda.pack]
 
 1. Definition
 - A concise representation of anonymous function which can be passed around

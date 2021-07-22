@@ -1,16 +1,17 @@
-# POINTS
+******************************************* CONSUMER **********************************************
+[package consumer_interface.pack]
 
 1. Consumer accepts Target type but results must always be void
 2. Consumer Operation
     [abstract] > accept - evaluates the consumer 
-    [default]  > andThen - combines the similar datatype Consumers results
+    [default]  > andThen - combines the similar data type consumers results
 3. Consumer will not return anything even if corresponding consumer method returns like list.add
 4. BiConsumer is similar to consumer except it accepts two parameters
 5. Consumer is majorly used for all operations where input is required like "Printing Numbers"
 
 # Primitive Specialization 
 1. Prevents boxing of primitives & provides better performance
-2. Remember that primitive specialization doesnt required any target type to be specified 
+2. Remember that primitive specialization doesn't required any target type to be specified 
 3. Consumer operation supports
     - IntConsumer, LongConsumer, DoubleConsumer 
 4. Customer Chaining
@@ -20,7 +21,7 @@
 6. No BiConsumer Chaining
 
 # Issues
-1. Consumer 'andThen' operation doesn't works on different datatype consumers
+1. Consumer 'andThen' operation doesn't works on different data type consumers
 2. Consumer<void> doesn't work
 3. BiConsumer<void, void> doesn't work
 

@@ -1,13 +1,11 @@
-# POINTS
-
-# Functional Interface
+***************************************** FUNCTIONAL INTERFACE *************************************
+[package functional_interface.pack]
 
 1. An interface which has only single abstract method
-  > It can have any number of default methods / static methods
+    - It can have any number of default methods / static methods
 2. It can be represented by annotation '@FunctionalInterface' which informs other developers to
-  that developer cannot add any abstract method
+   that developer cannot add any abstract method
 3. '@FunctionalInterface' forces the user to add abstract method else throw compiler error
-
 Ex - Runnable, Callable, Comparator
 
 # Functional Descriptor
@@ -15,7 +13,6 @@ Ex - Runnable, Callable, Comparator
 i.e () -> System.out.print("Hello");
      | |        |
     () -> void ========> Matches the Runnable / Callable interface    
-
 
 public interface comparator<T> {
     int compare(T t1, T t2);
