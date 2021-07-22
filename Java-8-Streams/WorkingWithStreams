@@ -108,5 +108,13 @@ not Optional<Integer>
 # Advantages of Numeric Streams
 - We can modify the number datatype using mapTo functions and obtain the result
 
+# Numeric Ranges
+- It is used for generating the number streams
+- A common use-case when dealing with numbers
+- It is applicable on two class IntStream & LongStream
+- For above class, following static methods are applied 
+    - range : the end value is exclusive
+    - rangeClosed : the end value is inclusive
+
 # PENDING
 1. Chain allMatch, noneMatch, anyMatch & see the result

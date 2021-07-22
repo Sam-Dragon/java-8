@@ -5,6 +5,6 @@ public interface InterfaceWithDefaultAndStaticMethodsParentMother
         extends InterfaceWithDefaultAndStaticMethodsParentGrandFather {
 
     default void defaultMethod() {
-        System.out.println("Default Method- Mother");
+        System.out.println("Default Method - Mother");
     }
 }

@@ -1,10 +1,10 @@
 package multiple_inheritance.resoultion_rule_3.pack;
 
-public class MostSpecificSubInterfaceWinOverInterface implements InterfaceWithDefaultAndStaticMethodsParentMother,
+public class ClassMustOverrideSubInterfaceDefaultMethod implements InterfaceWithDefaultAndStaticMethodsParentMother,
         InterfaceWithDefaultAndStaticMethodsParentGrandFather {
 
     public static void main(String[] args) {
-        new MostSpecificSubInterfaceWinOverInterface().defaultMethod();
+        new ClassMustOverrideSubInterfaceDefaultMethod().defaultMethod();
     }
 
     @Override

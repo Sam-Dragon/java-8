@@ -4,7 +4,6 @@ public class ParentClassWithDefaultMethodName implements InterfaceWithDefaultAnd
 
     @Override
     public void defaultMethod() {
-        // TODO Auto-generated method stub
         InterfaceWithDefaultAndStaticMethodsParentGrandFather.super.defaultMethod();
     }
 }

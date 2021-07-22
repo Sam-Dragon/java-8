@@ -6,6 +6,7 @@ public class ClassWithDefaultAndStaticMethodsImpl implements InterfaceWithDefaul
         InterfaceWithDefaultAndStaticMethods.staticMethod();
 
         ClassWithDefaultAndStaticMethodsImpl interfaceMethods = new ClassWithDefaultAndStaticMethodsImpl();
+        // It works
         // interfaceMethods.defaultMethod();
         interfaceMethods.callDefaultMethod();
     }

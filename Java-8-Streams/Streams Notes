@@ -54,6 +54,11 @@
     - findFirst(Predicate p)
     - reduce() - Stateful Bounded
 
+# Advantages
+> Declarative - More concise and readable
+> Composable - More Flexible
+> Parallelizable - Better Performance
+
 # Stateful Vs Stateless Operations
 > Stateful operations are those operations which depends on the internal state to accumalte result
 For Ex - Reduce operations needs to know the maximum salary of employee
@@ -73,11 +78,26 @@ For Ex - Get first three maximum salary of employee
 For Ex - Unique elements from the infinite number list
 > Functions - distinct, sorted etc..
 
-# Advantages
-> Declarative - More concise and readable
-> Composable - More Flexible
-> Parallelizable - Better Performance
 
-# Creating Streams
-1. Stream.of
-2. Arrays.stream
+# Creating Finite Streams
+- It can be created directly or indirectly as mentioned below
+
+1. Stream.of("Rahul", "Sheth")
+2. Arrays.stream(new int[] {1, 2, 3})
+3. Stream<String> lines = Files.lines(Paths.get("Project File.txt"), Charset.defaultCharset())
+4. Collections.stream()
+5. Numeric Ranges
+- IntStream.range(start, end) OR IntStream.rangeClosed(start, end)
+- LongStream.range(start, end) OR LongStream.rangeClosed(start, end)
+
+
+# Creating InFinite Streams
+- Always limit the infinite streams 
+
+1. Stream.generate
+- It accepts the supplier
+[Java 8 & 11] - Stream.generate(() -> Math.random()).limit(5)
+
+2. Stream.iterate
+[Java 8]  - Stream.iterate(0, i -> i + 1).limit(5)
+[Java 11] - Stream.iterate(0, i -> i < 5, i -> i + 1) ----> Specialized
