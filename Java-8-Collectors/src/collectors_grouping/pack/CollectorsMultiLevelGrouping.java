@@ -1,0 +1,19 @@
+package collectors_grouping.pack;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import model.pack.Employee;
+
+public class CollectorsMultiLevelGrouping {
+
+    public static void main(String[] args) {
+        System.out.println("Multi Level Grouping By Employee Name Then by Mobile");
+        Map<String, Map<String, List<Employee>>> employeeMap = Employee.employees().stream()
+                .collect(Collectors.groupingBy(Employee::getName, Collectors.groupingBy(Employee::getMobile)));
+
+        employeeMap.forEach((k, v) -> System.out.println(k + " : " + v));
+//      employeeMap.forEach((k, v) -> System.out.println(k + " : " + v));
+    }
+}

@@ -1,0 +1,83 @@
+***************************************** COLLECTORS **********************************************
+
+# Advantage of functional style over imperative style 
+- Readability
+- Less verbose
+- performance
+- Composability
+- Re-usability
+
+# Collector [I]
+# Collection [I]
+# Collectors [C]
+# collect [M] 
+
+- Internal implementation for List in grouping by is ARRAYLIST i.e. Collectors.toList()
+- Internal implementation for Set in grouping by is HASHSET i.e. Collectors.toSet()
+- Internal implementation for map in grouping by is HASHMAP i.e. Collectors.toMap()
+
+# Collectors Methods
+1. Collectors.toList(), Collectors.toSet(), Collectors.toMap(), Collectors.toCollection() 
+- Static methods which collects the data in form of mentioned collection
+
+# Reducing 
+1. Collectors.counting()
+- It is used for counting the number of records
+
+2. Collectors.maxBy and minBy(Comparator)
+- It is used for counting the number of records
+
+3. Collectors.reducing(initialValue, expression)
+- It is same as the reduce method on streams
+
+# Summarizing
+1. Collectors.summingInt, summingLong, summingDouble
+- static method which is used to give sum of the fields else default to its type [0]
+
+2. Collectors.averagingInt, averagingLong, averagingDouble
+- static method which is used to give average of the fields else default to its type [0.0]
+- Result is always a double value
+
+3. Collectors.summarizingInt, summarizingLong, summarizingDouble
+- Special static method which gives the aggregate summary of the specified field
+i.e. it gives sum, min, max, avg & count
+- Appropriate getter methods are provided for the same
+
+4. Collectors.joining
+- It is used to joining the result. By Default, join happens without any delimiter
+- Ensure joining happens on single column or field
+- It uses StringBuilder internally
+- It has 3 version
+  - join : It produces the results by concatenating the data
+  - join with delimiter : It produces the results by concatenating the data separated by provided delimiter
+  - join with delimiter, prefix, suffix : It produces the results by concatenating the data 
+                                          separated by provided delimiter and begin with prefix 
+                                          and ending with suffix
+
+# Grouping
+- Grouping with function, here function is also called as Classification function 
+- Basically, useful in finding the outstanding details from the set like max, min, avg & also
+for checking count 
+- Collectors.groupingBy(Employee::getName) ==> Collectors.groupingBy(Employee::getName, toList())
+Here, result with key as single column specified and value as collection
+- Multi-Level grouping can be done by Collector.groupingBy inside Collector.groupingBy 
+But this becomes complicated to deal when goes beyond 2 levels hierarchy
+- While Collecting data in sub-groups, operations such as max, min etc.. result is optional value
+to get rid of them collectingAndThen must be used
+- Never use direct SYSO on forEach while doing grouping by as it returns Map<k, v>
+- Collectors.groupingBy(F, C)
+
+# Partitioning
+- It is a special type of grouping which gives result in form of true & false. [Map<Boolea, Collection>]
+- Advantage : It is useful if you need both sets of results else streams are good enough
+- Collectors.partitioningBy(P), Collectors.partitioningBy(P, G)
+
+# Collector Interface
+- It is the interface which consists of set of methods that provide blueprint for how to implement
+specific reduction operations
+- We can create Custom Collector for better performance
+Ex : toList or groupingBy
+
+
+# When to choose collector operations vs stream operations  
+# Can we put sort on grouping call

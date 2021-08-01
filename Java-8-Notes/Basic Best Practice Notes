@@ -59,3 +59,20 @@ using map if the collect expects some other field of object
 
 #. While calling collectors.groupingBy(), ensure dont call forEach with print directly
 as group by provide two parameters
+
+# Collectors class methods
+- toList() : provides results in form of list 
+- toSet() : provides results in form of set [remove duplicates] 
+- toMap() : provides results in form of map [Key is unqiue, value can be anything]
+- toCollection()  : provides results in form of specified collection [list, set or map] 
+- counting() : provides count of the required object
+- summingInt() : provides sum of the required field
+- avaragingInt() : provides sum of the average field
+- summarizingInt() : provides sum of the characteristics field
+- joining() : concatenates the required field
+- maxBy() : provides max value of the required field
+- minBy() : provides min value of the required field
+- collectingAndThen : useful while fetching max, min value as it returns optional
+- reducing() : provides result in the required way
+- groupingBy() : groups the field as key and collection as value
+- partitioningBy() : special kind of grouping which gives results in boolean
