@@ -20,6 +20,7 @@
 #. DisAdvantages
     > Method references cannot be used directly on System.out.print() method because there are no
       overloaded version provided
+    > If the lamda expression works on the method parameters like interchanging or converting etc.
 
 # Question
 1. How to call method reference for parameterized constructor of Employee

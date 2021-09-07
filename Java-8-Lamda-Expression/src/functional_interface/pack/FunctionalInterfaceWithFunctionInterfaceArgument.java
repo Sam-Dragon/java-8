@@ -4,5 +4,5 @@ import java.util.function.Function;
 
 @FunctionalInterface
 public interface FunctionalInterfaceWithFunctionInterfaceArgument {
-    void display(String t, Function<Integer, String> function);
+    void display(String t, Function<String, String> function);
 }

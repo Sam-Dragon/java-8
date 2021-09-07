@@ -10,7 +10,8 @@ public class MethodReferencesApplicable {
     }
 
     public void compare() {
-        Comparator<Integer> compareString = (a, b) -> a.compareTo(b);
+//        Comparator<Integer> compareString = (a, b) -> a.compareTo(b);
+        Comparator<Integer> compareString = Integer::compareTo;
         int result = compareString.compare(10, 10);
         System.out.println("(a > b) ? " + (result >= 0));
 
