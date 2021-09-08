@@ -12,7 +12,7 @@ public class CollectingGroupingWithCollectingAndThen {
 
     public static void main(String[] args) {
         System.out.println("Collecting Grouping Maximum Calories Of Dishes By Type Removing Optional");
-        Map<Type, Dish> dishesByType = Dish.menu().stream().collect(Collectors.groupingBy(Dish::getType, Collectors
+        Map<Type, Dish> dishesByType = Dish.menuUpdated().stream().collect(Collectors.groupingBy(Dish::getType, Collectors
                 .collectingAndThen(Collectors.maxBy(Comparator.comparing(Dish::getCalories)), Optional::get)));
 
         System.out.println(dishesByType);

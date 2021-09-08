@@ -40,8 +40,8 @@ public class CollectorsMappingMethods {
     }
 
     private static void flatMappingEmployees(List<Employee> employees) {
-//        Optional<Employee> employeeList = employees.stream().collect(
-//                Collectors.flatMapping(Function.identity(), Collectors.minBy(null)));
+//        List<Object> employeeList = employees.stream().collect(
+//                Collectors.flatMapping(e -> e.getSalary().stream(), Collectors.toList()));
 //        System.out.println("Employee Salary Count > 2500000 :: " + employeeList);
     }
 
