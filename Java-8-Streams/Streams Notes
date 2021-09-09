@@ -60,22 +60,22 @@
 > Parallelizable - Better Performance
 
 # Stateful Vs Stateless Operations
-> Stateful operations are those operations which depends on the internal state to accumalte result
-For Ex - Reduce operations needs to know the maximum salary of employee
+> Stateful operations are those operations which depends on the internal state to accumulate result
+Ex - Reduce operations needs to know the maximum salary of employee
 > Functions - distinct, limit, skip, sorted, reduce
 
 > Stateless operations are those operations which does not depend on the internal state to 
-accumalte result
-For Ex - Reduce operations needs to know the maximum salary of employee
+accumulate result
+Ex - Reduce operations needs to know the maximum salary of employee
 > Functions - filter, map etc..
 
 # Bounded Vs UnBounded Operations
 > Bounded operations are those operations which has a boundary
-For Ex - Get first three maximum salary of employee
+Ex - Get first three maximum salary of employee
 > Functions - limit, skip, sorted, reduce
 
 > UnBounded operations are those operations which does not have any boundary
-For Ex - Unique elements from the infinite number list
+Ex - Unique elements from the infinite number list
 > Functions - distinct, sorted etc..
 
 
@@ -84,7 +84,6 @@ For Ex - Unique elements from the infinite number list
 
 1. Stream.of("Rahul", "Sheth")
 2. Arrays.stream(new int[] {1, 2, 3})
-3. Stream<String> lines = Files.lines(Paths.get("Project File.txt"), Charset.defaultCharset())
 4. Collections.stream()
 5. Numeric Ranges
 - IntStream.range(start, end) OR IntStream.rangeClosed(start, end)

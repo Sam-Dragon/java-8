@@ -10,8 +10,12 @@ public class FilteringUniqueElements {
         System.out.println("Employee List");
         Employee.employees().stream().map(Employee::getName).collect(Collectors.toList()).forEach(System.out::println);
 
-        System.out.println("\nFiltered Name Unique Employee List");
-        Employee.employees().stream().map(Employee::getName).filter(e -> "Khushboo".equalsIgnoreCase(e)).distinct()
+        System.out.println("\nFiltered Name Unique Employee List - Using distinct");
+        Employee.employees().stream().map(Employee::getName).filter(e -> "Khushboo Shah".equalsIgnoreCase(e)).distinct()
                 .collect(Collectors.toList()).forEach(System.out::println);
+
+        System.out.println("\nFiltered Name Unique Employee List - Using Set");
+        Employee.employees().stream().map(Employee::getName).filter(e -> "Khushboo Shah".equalsIgnoreCase(e))
+                .collect(Collectors.toSet()).forEach(System.out::println);
     }
 }
