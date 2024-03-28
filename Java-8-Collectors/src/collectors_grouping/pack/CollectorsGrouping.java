@@ -7,15 +7,13 @@ import java.util.Set;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import model.pack.Employee;
-
 public class CollectorsGrouping {
 
     public static void main(String[] args) {
 
         System.out.println("Single Grouping By Employee Name");
-        Map<String, List<Employee>> employeeMap = Employee.employees().stream()
-                .collect(Collectors.groupingBy(Employee::getName));
+        Map<String, List<model.pack.EmployeeObj>> employeeMap = model.pack.EmployeeObj.employees().stream()
+                .collect(Collectors.groupingBy(model.pack.EmployeeObj::getName));
 
         employeeMap.forEach((k, v) -> System.out.println(k + " : " + v));
 //      employeeMap.forEach((k, v) -> System.out.println(k + " : " + v));
@@ -25,15 +23,15 @@ public class CollectorsGrouping {
         System.out.println("Key Set " + keySet);
 
         System.out.println("\n<< Value Set >>");
-        Collection<List<Employee>> valueSet = employeeMap.values();
+        Collection<List<model.pack.EmployeeObj>> valueSet = employeeMap.values();
         System.out.println("Value Set " + valueSet);
 
         System.out.println("\n<< Entry Set >>");
-        Collection<Entry<String, List<Employee>>> entrySet = employeeMap.entrySet();
+        Collection<Entry<String, List<model.pack.EmployeeObj>>> entrySet = employeeMap.entrySet();
         System.out.println("Value Set " + entrySet);
 
         System.out.println("\n<< List for Rahul >>");
-        List<Employee> rahulEmployees = employeeMap.get("Rahul");
+        List<model.pack.EmployeeObj> rahulEmployees = employeeMap.get("Rahul");
         System.out.println("Rahul Employees " + rahulEmployees);
     }
 }

@@ -2,24 +2,22 @@ package streams_features.pack;
 
 import java.util.List;
 
-import model.pack.Dish;
-
 public class StreamsSupportsInternalIteration {
 
     public static void main(String[] args) {
         System.out.println("External Iteration");
-        externalIteration(Dish.menu());
+        externalIteration(model.pack.DishObj.menu());
 
         System.out.println("\n\nInternal Iteration");
-        internalIteration(Dish.menu());
+        internalIteration(model.pack.DishObj.menu());
     }
 
-    private static void internalIteration(List<Dish> menu) {
+    private static void internalIteration(List<model.pack.DishObj> menu) {
         menu.forEach(dish -> System.out.print(dish.getName() + ", "));
     }
 
-    public static void externalIteration(List<Dish> list) {
-        for (Dish dish : list) {
+    public static void externalIteration(List<model.pack.DishObj> list) {
+        for (model.pack.DishObj dish : list) {
             System.out.print(dish.getName() + ", ");
         }
     }

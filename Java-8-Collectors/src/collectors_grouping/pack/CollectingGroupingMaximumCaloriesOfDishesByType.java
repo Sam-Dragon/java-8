@@ -5,14 +5,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import model.pack.Dish;
-import model.pack.Dish.Type;
+import model.pack.DishObj.Type;
 
 public class CollectingGroupingMaximumCaloriesOfDishesByType {
 
     public static void main(String[] args) {
-        Map<Type, Optional<Dish>> dishesCountByType = Dish.menu().stream().collect(
-                Collectors.groupingBy(Dish::getType, Collectors.maxBy(Comparator.comparing(Dish::getCalories))));
+        Map<Type, Optional<model.pack.DishObj>> dishesCountByType = model.pack.DishObj.menu().stream().collect(
+                Collectors.groupingBy(model.pack.DishObj::getType, Collectors.maxBy(Comparator.comparing(model.pack.DishObj::getCalories))));
 
         System.out.println(dishesCountByType);
     }

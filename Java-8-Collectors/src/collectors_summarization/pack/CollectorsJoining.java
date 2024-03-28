@@ -3,11 +3,9 @@ package collectors_summarization.pack;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import model.pack.Employee;
-
 public class CollectorsJoining {
     public static void main(String[] args) {
-        List<Employee> employees = Employee.employees();
+        List<model.pack.EmployeeObj> employees = model.pack.EmployeeObj.employees();
 
         System.out.println("\n# Joining By Unique Employee Name Without Delimiter");
         joinByName(employees);
@@ -19,20 +17,20 @@ public class CollectorsJoining {
         joinByNameWithPrefixDelimeterSuffix(employees);
     }
 
-    private static void joinByName(List<Employee> employees) {
-        String concatenatedEmployees = employees.stream().map(Employee::getName).distinct()
+    private static void joinByName(List<model.pack.EmployeeObj> employees) {
+        String concatenatedEmployees = employees.stream().map(model.pack.EmployeeObj::getName).distinct()
                 .collect(Collectors.joining());
         System.out.println(concatenatedEmployees);
     }
 
-    private static void joinByNameWithDelimiter(List<Employee> employees) {
-        String concatenatedEmployees = employees.stream().map(Employee::getName).distinct()
+    private static void joinByNameWithDelimiter(List<model.pack.EmployeeObj> employees) {
+        String concatenatedEmployees = employees.stream().map(model.pack.EmployeeObj::getName).distinct()
                 .collect(Collectors.joining(","));
         System.out.println(concatenatedEmployees);
     }
 
-    private static void joinByNameWithPrefixDelimeterSuffix(List<Employee> employees) {
-        String concatenatedEmployees = employees.stream().map(Employee::getName).distinct()
+    private static void joinByNameWithPrefixDelimeterSuffix(List<model.pack.EmployeeObj> employees) {
+        String concatenatedEmployees = employees.stream().map(model.pack.EmployeeObj::getName).distinct()
                 .collect(Collectors.joining(",", "{", "}"));
         System.out.println(concatenatedEmployees);
     }

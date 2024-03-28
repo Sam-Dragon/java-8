@@ -4,13 +4,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import model.pack.Dish;
-
 public class CollectorGroupingWithEnums {
 
     public static void main(String[] args) {
 
-        Map<Calories, List<Dish>> dishesByCalorieLevel = Dish.menu().stream().collect(Collectors.groupingBy(d -> {
+        Map<Calories, List<model.pack.DishObj>> dishesByCalorieLevel = model.pack.DishObj.menu().stream().collect(Collectors.groupingBy(d -> {
             if (d.getCalories() <= 400)
                 return Calories.DIET;
             else if (d.getCalories() <= 700)

@@ -4,19 +4,17 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.pack.Employee;
-
 public class CustomEmployeeConsumerExample {
 
     public static void main(String[] args) {
-        TriConsumerInterface<Employee, Employee, Employee> employeeConsumer = CustomEmployeeConsumerExample::filter;// Employee::new
-        employeeConsumer.recieve(new Employee(1L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
-                new Employee(2L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
-                new Employee(3L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)));
+        TriConsumerInterface<model.pack.EmployeeObj, model.pack.EmployeeObj, model.pack.EmployeeObj> employeeConsumer = CustomEmployeeConsumerExample::filter;// Employee::new
+        employeeConsumer.recieve(new model.pack.EmployeeObj(1L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
+                new model.pack.EmployeeObj(2L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
+                new model.pack.EmployeeObj(3L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)));
     }
 
-    public static void filter(Employee employee, Employee employee2, Employee employee3) {
-        List<Employee> employees = new ArrayList<>();
+    public static void filter(model.pack.EmployeeObj employee, model.pack.EmployeeObj employee2, model.pack.EmployeeObj employee3) {
+        List<model.pack.EmployeeObj> employees = new ArrayList<>();
         employees.add(employee);
         employees.add(employee2);
         employees.add(employee3);

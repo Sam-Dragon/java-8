@@ -4,15 +4,13 @@ import java.math.BigDecimal;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import model.pack.Employee;
-
 public class PredicateExample {
 
     public static void main(String[] args) {
         // Predicate<void> predicate = () -> System.out.print("Hello World");
 
-        Predicate<Employee> employeeSalaryPredicate = e -> e.getSalary().compareTo(BigDecimal.valueOf(7500000)) >= 0;
-        System.out.println(Employee.employees().stream().filter(employeeSalaryPredicate).collect(Collectors.toList()));
+        Predicate<model.pack.EmployeeObj> employeeSalaryPredicate = e -> e.getSalary().compareTo(BigDecimal.valueOf(7500000)) >= 0;
+        System.out.println(model.pack.EmployeeObj.employees().stream().filter(employeeSalaryPredicate).collect(Collectors.toList()));
 
         Predicate<String> stringPredicate = (String s) -> s.length() > 10;
         Predicate<String> stringAnotherPredicate = s -> s.length() < 10;

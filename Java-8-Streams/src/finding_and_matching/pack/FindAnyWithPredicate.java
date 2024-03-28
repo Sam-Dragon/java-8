@@ -3,8 +3,6 @@ package finding_and_matching.pack;
 import java.math.BigDecimal;
 import java.util.Optional;
 
-import model.pack.Employee;
-
 public class FindAnyWithPredicate implements Runnable {
 
     public static void main(String[] args) {
@@ -34,7 +32,7 @@ public class FindAnyWithPredicate implements Runnable {
 
     @Override
     public void run() {
-        Optional<Employee> findAnyEmployee = Employee.employees().stream()
+        Optional<model.pack.EmployeeObj> findAnyEmployee = model.pack.EmployeeObj.employees().stream()
                 .filter(e -> e.getSalary().compareTo(BigDecimal.valueOf(55000)) > 0).findAny();
         System.out.println(findAnyEmployee);
     }

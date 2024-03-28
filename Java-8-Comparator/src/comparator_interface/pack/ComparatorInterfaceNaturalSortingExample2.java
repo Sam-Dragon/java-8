@@ -3,7 +3,6 @@ package comparator_interface.pack;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
-import model.pack.Employee;
 import model.pack.EmployeeImplmementsComparable;
 
 public class ComparatorInterfaceNaturalSortingExample2 {
@@ -15,14 +14,14 @@ public class ComparatorInterfaceNaturalSortingExample2 {
 
     private static void sortByStreamNaturalOrder() {
         System.out.println("Before Sorting");
-        Employee.employeeList().stream().forEach(System.out::println);
+        model.pack.EmployeeObj.employeeList().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name Natural Order - ASC");
-        Employee.employeeList().stream().sorted(Comparator.comparing(Employee::getId, Comparator.naturalOrder()))
+        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId, Comparator.naturalOrder()))
                 .collect(Collectors.toList()).forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name - ASC");
-        Employee.employeeList().stream().sorted(Comparator.comparing(Employee::getId))
+        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId))
                 .collect(Collectors.toList()).forEach(System.out::println);
         
         System.out.println("\n[STREAM] Sorting By Name - ASC [Comparable Implemented]");
@@ -30,7 +29,7 @@ public class ComparatorInterfaceNaturalSortingExample2 {
                 .collect(Collectors.toList()).forEach(System.out::println);
         
         System.out.println("\n[STREAM] Sorting By Name - ASC [Exception Thrown]");
-        Employee.employeeList().stream().sorted()
+        model.pack.EmployeeObj.employeeList().stream().sorted()
                 .collect(Collectors.toList()).forEach(System.out::println);
         
         

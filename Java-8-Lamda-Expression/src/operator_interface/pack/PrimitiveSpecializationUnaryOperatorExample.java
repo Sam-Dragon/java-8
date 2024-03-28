@@ -3,8 +3,6 @@ package operator_interface.pack;
 import java.util.function.IntUnaryOperator;
 import java.util.function.UnaryOperator;
 
-import model.pack.Employee;
-
 public class PrimitiveSpecializationUnaryOperatorExample {
 
     public static void main(String[] args) {
@@ -30,7 +28,7 @@ public class PrimitiveSpecializationUnaryOperatorExample {
         Integer number = (Integer) UnaryOperator.identity().apply(age);
         System.out.println(number);
 
-        Employee employee = (Employee) UnaryOperator.identity().apply(new Employee());
+        model.pack.EmployeeObj employee = (model.pack.EmployeeObj) UnaryOperator.identity().apply(new model.pack.EmployeeObj());
         System.out.println(employee);
     }
 

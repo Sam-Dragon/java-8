@@ -4,13 +4,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import model.pack.Dish;
-
 public class PartitioningByDishCaloriesGreaterThan400 {
 
     public static void main(String[] args) {
-        Map<Boolean, List<String>> dishesGreaterThan400 = Dish.menu().stream().collect(Collectors.partitioningBy(
-                dish -> dish.getCalories() > 400, Collectors.mapping(Dish::getName, Collectors.toList())));
+        Map<Boolean, List<String>> dishesGreaterThan400 = model.pack.DishObj.menu().stream().collect(Collectors.partitioningBy(
+                dish -> dish.getCalories() > 400, Collectors.mapping(model.pack.DishObj::getName, Collectors.toList())));
 
         System.out.println(dishesGreaterThan400);
 

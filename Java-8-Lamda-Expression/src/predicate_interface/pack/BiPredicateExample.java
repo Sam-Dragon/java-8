@@ -3,20 +3,18 @@ package predicate_interface.pack;
 import java.math.BigDecimal;
 import java.util.function.BiPredicate;
 
-import model.pack.Employee;
-
 public class BiPredicateExample {
 
     public static void main(String[] args) {
         // BiBiPredicate<void, void> BiPredicate = () -> System.out.print("Hello
         // World");
 
-        BiPredicate<Employee, Employee> employeeSalaryBiPredicate = (e,
-                e2) -> e.getSalary().compareTo(BigDecimal.valueOf(7500)) >= 0
+        BiPredicate<model.pack.EmployeeObj, model.pack.EmployeeObj> employeeSalaryBiPredicate = (e,
+                                                                                                 e2) -> e.getSalary().compareTo(BigDecimal.valueOf(7500)) >= 0
                         && e2.getSalary().compareTo(BigDecimal.valueOf(7500000)) >= 0;
         System.out.println(employeeSalaryBiPredicate.test(
-                new Employee(1L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
-                new Employee(2L, "Employee", "+919735672353", BigDecimal.valueOf(145120404))));
+                new model.pack.EmployeeObj(1L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
+                new model.pack.EmployeeObj(2L, "Employee", "+919735672353", BigDecimal.valueOf(145120404))));
 
         BiPredicate<String, String> stringBiPredicate = (s, s2) -> s.length() + s2.length() > 10;
         BiPredicate<String, String> stringAnotherBiPredicate = (s, s2) -> s.length() + s2.length() < 10;

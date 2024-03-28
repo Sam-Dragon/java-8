@@ -2,8 +2,6 @@ package supplier_interface.pack;
 
 import java.util.function.Supplier;
 
-import model.pack.Employee;
-
 public class SupplierExample {
 
     public static void main(String[] args) {
@@ -15,8 +13,8 @@ public class SupplierExample {
         Supplier<Integer> integerSupplier = () -> 10;
         System.out.println(integerSupplier.get());
 
-        Supplier<Employee> employeeSupplier = Employee::new;
-        Employee employee = employeeSupplier.get();
+        Supplier<model.pack.EmployeeObj> employeeSupplier = model.pack.EmployeeObj::new;
+        model.pack.EmployeeObj employee = employeeSupplier.get();
         System.out.println(employee);
     }
 

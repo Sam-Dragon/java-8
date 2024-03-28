@@ -3,8 +3,6 @@ package finding_and_matching.pack;
 import java.math.BigDecimal;
 import java.util.Optional;
 
-import model.pack.Employee;
-
 public class FindFirstWithPredicate implements Runnable {
 
     public static void main(String[] args) {
@@ -34,7 +32,7 @@ public class FindFirstWithPredicate implements Runnable {
 
     @Override
     public void run() {
-        Optional<Employee> findFirstEmployee = Employee.employees().stream().filter(e -> e.getSalary().compareTo(BigDecimal.valueOf(55000)) > 0)
+        Optional<model.pack.EmployeeObj> findFirstEmployee = model.pack.EmployeeObj.employees().stream().filter(e -> e.getSalary().compareTo(BigDecimal.valueOf(55000)) > 0)
                 .findFirst();
         System.out.println(findFirstEmployee);
     }

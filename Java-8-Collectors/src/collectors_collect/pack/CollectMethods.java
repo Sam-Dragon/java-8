@@ -6,8 +6,6 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
-import model.pack.Employee;
-
 public class CollectMethods {
 
     public static void main(String[] args) {
@@ -28,20 +26,20 @@ public class CollectMethods {
 
     private static void collectUsingToCollect() {
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toCollection(LinkedList::new)).forEach(System.out::println);
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toCollection(LinkedList::new)).forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toCollection(ArrayList::new)).forEach(System.out::println);
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toCollection(ArrayList::new)).forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toCollection(HashSet::new)).forEach(System.out::println);
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toCollection(HashSet::new)).forEach(System.out::println);
 
 //        Calling on objects is dangerous as it needs field to sort        
 //        System.out.println();
 //        Employee.employeeList().stream().collect(Collectors.toCollection(TreeSet::new)).forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toCollection(LinkedHashSet::new))
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toCollection(LinkedHashSet::new))
                 .forEach(System.out::println);
 
 //        Not applicable for Maps
@@ -50,35 +48,35 @@ public class CollectMethods {
 
     private static void collectToConcurrentMap() {
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toConcurrentMap(Employee::getId, Employee::getName))
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toConcurrentMap(model.pack.EmployeeObj::getId, model.pack.EmployeeObj::getName))
                 .forEach((k, v) -> System.out.println(k + " : " + v));
     }
 
     private static void collectToUnmodifiableCollection() {
         System.out.println();
-        Employee.employeeList().stream().map(Employee::getName).collect(Collectors.toUnmodifiableList())
+        model.pack.EmployeeObj.employeeList().stream().map(model.pack.EmployeeObj::getName).collect(Collectors.toUnmodifiableList())
                 .forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().map(Employee::getName).collect(Collectors.toUnmodifiableSet())
+        model.pack.EmployeeObj.employeeList().stream().map(model.pack.EmployeeObj::getName).collect(Collectors.toUnmodifiableSet())
                 .forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toUnmodifiableMap(Employee::getId, Employee::getName))
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toUnmodifiableMap(model.pack.EmployeeObj::getId, model.pack.EmployeeObj::getName))
                 .forEach((k, v) -> System.out.println(k + " : " + v));
     }
 
     private static void collectToDifferentCollection() {
         System.out.println();
-        Employee.employeeList().stream().map(Employee::getName).collect(Collectors.toList())
+        model.pack.EmployeeObj.employeeList().stream().map(model.pack.EmployeeObj::getName).collect(Collectors.toList())
                 .forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().map(Employee::getName).collect(Collectors.toSet())
+        model.pack.EmployeeObj.employeeList().stream().map(model.pack.EmployeeObj::getName).collect(Collectors.toSet())
                 .forEach(System.out::println);
 
         System.out.println();
-        Employee.employeeList().stream().collect(Collectors.toMap(Employee::getId, Employee::getName))
+        model.pack.EmployeeObj.employeeList().stream().collect(Collectors.toMap(model.pack.EmployeeObj::getId, model.pack.EmployeeObj::getName))
                 .forEach((k, v) -> System.out.println(k + " : " + v));
     }
 }

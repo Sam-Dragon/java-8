@@ -2,8 +2,6 @@ package function_interface.pack;
 
 import java.util.function.Function;
 
-import model.pack.Employee;
-
 public class FunctionExample {
 
     public static void main(String[] args) {
@@ -37,7 +35,7 @@ public class FunctionExample {
         Integer number = (Integer) Function.identity().apply(age);
         System.out.println(number);
 
-        Employee employee = (Employee) Function.identity().apply(new Employee());
+        model.pack.EmployeeObj employee = (model.pack.EmployeeObj) Function.identity().apply(new model.pack.EmployeeObj());
         System.out.println(employee);
     }
 

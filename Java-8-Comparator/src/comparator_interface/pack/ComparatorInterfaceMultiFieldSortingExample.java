@@ -3,8 +3,6 @@ package comparator_interface.pack;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
-import model.pack.Employee;
-
 public class ComparatorInterfaceMultiFieldSortingExample {
 
     public static void main(String[] args) {
@@ -14,10 +12,10 @@ public class ComparatorInterfaceMultiFieldSortingExample {
 
     private static void sortByStream() {
         System.out.println("Before Sorting");
-        Employee.employees().stream().forEach(System.out::println);
+        model.pack.EmployeeObj.employees().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name then id - ASC");
-        Employee.employees().stream().sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getId))
+        model.pack.EmployeeObj.employees().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getName).thenComparing(model.pack.EmployeeObj::getId))
                 .collect(Collectors.toList()).forEach(System.out::println);
     }
 
