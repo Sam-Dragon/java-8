@@ -1,0 +1,78 @@
+# Best Practices
+
+#. For Number related operations, use Primitive Number specializations as it avoids boxing costs
+such as IntStream, LongStream, DoubleStream 
+                    (Or) 
+convert your streams to Number streams using mapToInt, mapToLong, mapToDouble 
+
+#. For Functional Interfaces, use Primitive specializations 
+> For Predicate, Primitive specializations 
+    - IntPredicate, LongPredicate, DoublePredicate
+> For Supplier, Primitive specializations 
+    - BooleanSupplier, IntSupplier, LongSupplier, DoubleSupplier
+> For Consumer, Primitive specializations 
+    - IntConsumer, LongConsumer, DoubleConsumer
+> For BiConsumer, Primitive specializations 
+    - ObjIntConsumer, ObjLongConsumer, ObjDoubleConsumer
+> For Function, Primitive specializations are 
+    - IntFunction, LongFunction, DoubleFunction, IntToLongFunction, IntToDoubleFunction,
+      LongToIntFunction, LongToDoubleFunction, ToIntFunction , ToLongFunction, ToDoubleFunction 
+> For BiFunction, Primitive specializations are 
+    - ToIntBiFunction, ToLongBiFunction, ToDoubleBiFunction 
+> For Unary Operator, Primitive specializations are
+    - IntUnaryOperator , LongUnaryOperator , DoubleUnaryOperator
+> For Binary Operator, Primitive specializations are 
+    - IntBinaryOperator, LongBinaryOperator, DoubleBinaryOperator
+
+#. For Functional Interfaces, use chaining operations
+> For Predicate, Chaining operations are or(P), and(P), negate()
+> For Supplier, No Chaining operations 
+> For Consumer, Chaining operations are andThen(C)
+> For BiConsumer, Chaining operations are andThen(BC)
+> For Function, Chaining operations are andThen(F), compose(F)
+> For BiFunction, Chaining operations are andThen(F) 
+> For Unary Operator, Chaining operations are andThen(F), compose(F) inherit from Function
+> For Binary Operator, Chaining operations are andThen(F) inherit from Function
+
+# Function special static method which is Function.identity() which in lamda expression is n -> n
+
+# If the lamda expression doesn't match interface, then create one but ensure tag it with
+@FunctionalInterface annotation
+
+#. Always good to use map() with Method references to that field rather than calling field 
+using lamda expression else exception will come
+Ex - map(Transaction::getTrader).map(Trader::getCity) than t -> t.getTrader().getCity()
+
+# Use lamda's only if cannot be replaceable by method references
+
+# If external variable is injected in lamda expression, ensure it must be final in nature
+
+
+#. Its very important to see that we should not down grade from Object to field 
+using map if the collect expects some other field of object
+
+#. In order to add new method to the existing interface, Java 8 provides two ways
+    - Default Methods [Object]
+    - Static Methods [Class]
+    
+#. No function called Collectors.sorting for using under collect() method
+
+#. While calling collectors.groupingBy(), ensure dont call forEach with print directly
+as group by provide two parameters
+
+# Collectors class methods
+- toList() : provides results in form of list 
+- toSet() : provides results in form of set [remove duplicates] 
+- toMap() : provides results in form of map [Key is unqiue, value can be anything]
+- toCollection()  : provides results in form of specified collection [list, set or map] 
+- counting() : provides count of the required object
+- summingInt() : provides sum of the required field
+- avaragingInt() : provides sum of the average field
+- summarizingInt() : provides sum of the characteristics field
+- joining() : concatenates the required field
+- maxBy() : provides max value of the required field
+- minBy() : provides min value of the required field
+- collectingAndThen : useful while fetching max, min value as it returns optional
+- reducing() : provides result in the required way
+- groupingBy() : groups the field as key and collection as value
+- partitioningBy() : special kind of grouping which gives results in boolean
