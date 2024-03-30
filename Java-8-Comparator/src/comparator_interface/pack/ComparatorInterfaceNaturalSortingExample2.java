@@ -17,11 +17,14 @@ public class ComparatorInterfaceNaturalSortingExample2 {
         model.pack.EmployeeObj.employeeList().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name Natural Order - ASC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId, Comparator.naturalOrder()))
+        model.pack.EmployeeObj.employeeList().stream().sorted(
+                Comparator.comparing(model.pack.EmployeeObj::getId,
+                        Comparator.naturalOrder()))
                 .collect(Collectors.toList()).forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name - ASC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId))
+        model.pack.EmployeeObj.employeeList().stream().sorted(
+                Comparator.comparing(model.pack.EmployeeObj::getId))
                 .collect(Collectors.toList()).forEach(System.out::println);
         
         System.out.println("\n[STREAM] Sorting By Name - ASC [Comparable Implemented]");

@@ -18,7 +18,8 @@ public class ComparatorInterfaceNullSortingExample {
         model.pack.EmployeeObj.employeeList().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name Null First - ASC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.nullsFirst(Comparator.comparing(model.pack.EmployeeObj::getName)))
+        model.pack.EmployeeObj.employeeList().stream().sorted(
+                Comparator.nullsFirst(Comparator.comparing(model.pack.EmployeeObj::getName)))
                 .collect(Collectors.toList()).forEach(System.out::println);
     }
 

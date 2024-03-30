@@ -37,11 +37,14 @@ public class ComparatorInterfaceSingleFieldSortingExample {
         model.pack.EmployeeObj.employeeList().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - ASC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId)).collect(Collectors.toList())
+        model.pack.EmployeeObj.employeeList().stream()
+                .sorted(Comparator.comparing(model.pack.EmployeeObj::getId))
+                .collect(Collectors.toList())
                 .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - DESC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId).reversed())
+        model.pack.EmployeeObj.employeeList().stream()
+                .sorted(Comparator.comparing(model.pack.EmployeeObj::getId).reversed())
                 .collect(Collectors.toList()).forEach(System.out::println);
     }
 
@@ -50,13 +53,17 @@ public class ComparatorInterfaceSingleFieldSortingExample {
         model.pack.EmployeeObj.employeeList().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - ASC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId)).collect(Collectors.toList())
+        model.pack.EmployeeObj.employeeList().stream()
+                .sorted(Comparator.comparing(model.pack.EmployeeObj::getId))
+                .collect(Collectors.toList())
                 .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - DESC");
-        model.pack.EmployeeObj.employeeList().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getId, Comparator.reverseOrder())) // Change
-                                                                                                                  // is
-                                                                                                                  // here
+        model.pack.EmployeeObj.employeeList().stream()
+                .sorted(Comparator.comparing(model.pack.EmployeeObj::getId, Comparator.reverseOrder()))
+                // Change
+                // is
+                // here
                 .collect(Collectors.toList()).forEach(System.out::println);
     }
 

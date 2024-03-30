@@ -16,7 +16,7 @@ public class CreatingFiniteStreamFromFiles {
             // lines.flatMap(line -> Arrays.stream(line.split("
             // "))).distinct().forEach(System.out::println);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
 
     }

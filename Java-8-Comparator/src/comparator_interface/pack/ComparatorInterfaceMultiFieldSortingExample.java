@@ -15,7 +15,9 @@ public class ComparatorInterfaceMultiFieldSortingExample {
         model.pack.EmployeeObj.employees().stream().forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name then id - ASC");
-        model.pack.EmployeeObj.employees().stream().sorted(Comparator.comparing(model.pack.EmployeeObj::getName).thenComparing(model.pack.EmployeeObj::getId))
+        model.pack.EmployeeObj.employees().stream().sorted(
+                Comparator.comparing(model.pack.EmployeeObj::getName)
+                        .thenComparing(model.pack.EmployeeObj::getId))
                 .collect(Collectors.toList()).forEach(System.out::println);
     }
 

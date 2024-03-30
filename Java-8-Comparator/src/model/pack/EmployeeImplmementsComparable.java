@@ -12,7 +12,7 @@ public class EmployeeImplmementsComparable implements Comparable<EmployeeImplmem
     private BigDecimal salary;
 
     public EmployeeImplmementsComparable() {
-        System.out.println("EmployeeImplmementsComparable()");
+        System.out.println("EmployeeImplementsComparable()");
     }
 
     public EmployeeImplmementsComparable(Long id, String name, String mobile, BigDecimal salary) {
@@ -21,7 +21,7 @@ public class EmployeeImplmementsComparable implements Comparable<EmployeeImplmem
         this.name = name;
         this.mobile = mobile;
         this.salary = salary;
-        System.out.println("EmployeeImplmementsComparable(id, name, mobile, salary)");
+        System.out.println("EmployeeImplementsComparable(id, name, mobile, salary)");
     }
 
     public Long getId() {

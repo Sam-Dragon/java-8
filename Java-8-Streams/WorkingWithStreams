@@ -5,7 +5,7 @@
 particular set
 
 # Filtering A Predicate
-- It accepts lamda expression & basically returns BOOLEAN value. Basically a PREDICATE
+- It accepts lambda expression & basically returns BOOLEAN value. Basically a PREDICATE
 - filter(Predicate p) is used
 
 # Filtering Unique Elements
@@ -23,19 +23,19 @@ particular set
 # Mapping
 - Basically, we will be selecting specified columns
 
-# Mapping a Function ***** YET TO ADD
+# Mapping a Function
 - It can be used to select a single column or all columns
-- It accepts lamda expression & basically returns object value. Basically a Function
+- It accepts lambda expression & basically returns object value. Basically a Function
 - map(Function f) is used
 - It skips optional values
 > Disadvantage : We cannot select arbitrary or multiple columns
 > Special Case : Function can be replaced with PREDICATE or UNARY OPERATOR
 
-# Flat Mapping a Function ***** YET TO ADD
+# Flat Mapping a Function
 - It can be used to select a single column or all columns
 - It can also be used to flatten the streams i.e. Stream<Stream<String>> --> Stream<String>
-- It accepts lamda expression & basically returns object value. Basically a Function
-- flatMap(Function f) is used
+- It accepts lambda expression & basically returns object value. Basically a Function
+- flatMap(Stream<Function> f) is used
 - It skips optional values
 > Disadvantage : We cannot select arbitrary or multiple columns
 > Special Case : Function can be replaced with PREDICATE or UNARY OPERATOR
@@ -46,19 +46,19 @@ May not iterate the whole set until one condition matches
 
 # Matching all Elements of set
 - It basically returns true if all elements matches
-- It accepts lamda expression & basically returns BOOLEAN value. Basically a PREDICATE
+- It accepts lambda expression & basically returns BOOLEAN value. Basically a PREDICATE
 - Short circuit AND operation
 - allMatch(Predicate p) is used
 
 # Matching any Elements of set
 - It basically returns true if any of the element matches
-- It accepts lamda expression & basically returns BOOLEAN value. Basically a PREDICATE
+- It accepts lambda expression & basically returns BOOLEAN value. Basically a PREDICATE
 - Short circuit OR operation
 - anyMatch(Predicate p) is used
 
 # Matching none of Elements of set
 - It basically returns true if none of the elements matches. Reverse of allMatch()
-- It accepts lamda expression & basically returns BOOLEAN value. Basically a PREDICATE
+- It accepts lambda expression & basically returns BOOLEAN value. Basically a PREDICATE
 - Short circuit NOT operation
 - noneMatch(Predicate p) is used
 
@@ -71,7 +71,7 @@ May not iterate the whole set until one condition matches
 # Find First Element for Set
 - It gives the first matching element
 - It basically returns optional<T> whether element is found or not
-- It must be used in sequencial streams
+- It must be used in sequential streams
 - findFirst() is used
 
 # Reducing
@@ -83,7 +83,6 @@ May not iterate the whole set until one condition matches
 - It can be provided with reduce operation in two ways
   - first, we can provide initial value which is default if stream is empty
   - second, we wont provide initial value in which case Optional<?> value will be returned
- 
 
 # Numeric Streams
 - Streams specially designed to deal with number operations
@@ -117,6 +116,3 @@ not Optional<Integer>
 - For above class, following static methods are applied 
     - range : the end value is exclusive
     - rangeClosed : the end value is inclusive
-
-# PENDING
-1. Chain allMatch, noneMatch, anyMatch & see the result
