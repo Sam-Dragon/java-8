@@ -1,0 +1,30 @@
+# POINTS
+
+1. UnaryOperator accepts Target type but results always same Target type
+2. UnaryOperator operations
+   [static]   > identity - create instance
+- This is inherited from function interface
+   [abstract] > apply - evaluates the function
+   [default]  > andThen - evaluates the first expression and then replaces the same in second one
+   [default]  > compose - evaluates the second expression and then replaces the same in first one
+3. BinaryOperator same as that of unary but accepts two arguments in lamda expression
+4. BinaryOperator function
+   [static]   > maxBy - compare the input arguments and sends maximum value
+   [static]   > minBy - compare the input arguments and sends minimum value
+
+# Primitive Specialization 
+1. Prevents boxing of primitives & provides better performance
+2. Remember that primitive specialization doesnt required any target type to be specified 
+3. operator supports
+    - IntUnaryOperator , LongUnaryOperator , DoubleUnaryOperator  
+    - IntBinaryOperator, LongBinaryOperator, DoubleBinaryOperator
+4. Primitive UnaryOperator Chaining
+    > andThen, compose
+5. Primitive BinaryOperator Chaining
+    > maxBy, minBy 
+   
+# Issues
+1. UnaryOperator<void> & BinaryOperator<void> doesn't work
+
+Note : Always mark the custom functional  interface with @FunctionalInterface annotation 
+for safety purpose

@@ -1,0 +1,36 @@
+******************************************* PREDICATE **********************************************
+[package predicate_interface.pack]
+
+1. Predicate accepts Target type but return type always must be boolean
+2. Predicate equals doesn't work on predicateExpression matched with directly lamda expression
+3. Predicate operations
+        [abstract] > test(P) - evaluates the predicate 
+        [default]  > negate() - negates the predicate results
+        [default]  > and / or (P) - combines the similar data type predicates results based on 
+                     logical AND & OR 
+        [default]  > isEquals(P) - verifies if two predicates are same
+[J-11]   [static]  > not(P) - negates the predicate results
+4. Predicate Chaining
+   > and, or & negate
+5. BiPredicate is same as predicate but it accepts two parameters
+6. Custom predicates can be created if we need more than two parameters
+7. Predicate types is majorly used for "filtering"
+
+# Primitive Specialization 
+8. Prevents boxing of primitives & provides better performance
+9. Remember that primitive specialization doesn't required any target type to be specified 
+10. Operation supports
+    - IntPredicate, LongPredicate, DoublePredicate 
+11. Primitive Predicate Chaining [No IsEquals support]
+   > and, or & negate
+12. No Primitive Specialization Operation for BiPredicate
+
+# Issues
+1. Predicate 'and' & 'or' operation doesn't works on different data type predicates
+2. Predicate<void> doesn't work
+3. BiPredicate<void, void> doesn't work
+4. BiPredicate doesn't support isEquals method
+5. Primitive Specialization is not applied to streams functions as all methods are not supported
+
+Note : Always mark the custom functional interface with @FunctionalInterface annotation for safety 
+purpose

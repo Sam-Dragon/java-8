@@ -1,0 +1,103 @@
+****************************************** JAVA-8 STREAMS *****************************************
+
+> Streams are sequence of elements from a source that supports data processing operations
+  - sequence of elements : It will be elements of the specific type like LinkedList, HashSet etc..
+  - Source : It will be either collections, arrays or IO resources
+  - Data processing operations : Database like operations
+    - filter : where conditions
+    - map    : select columns
+    - reduce : max, min, avg etc..
+    - find   : select
+    - match  : like
+    - sort   : order by clause
+> Collections are about data, but streams are about computations
+> Streams are classified into Sequencial Streams & Parallel Streams
+> Streams in java8 meant to work on Collections unlike in java7 which works on files
+> Streams don't add or remove data elements from the actual collection
+> Streams once traversed cannot be re-traversed else it will throw exception
+> Loop fusion : Merging operations go through in a single pass. i.e. filter, map, distinct
+> Stream pipeline supports builder pattern
+  - [Stream pipelining] chain of intermediate operations like filter, map etc..
+  - Terminal operation like count, forEach
+
+# Characteristics
+> Pipelining 
+  - Chaining the operations which forms the pipeline. Like filter followed by map followed by collect
+  - It provides certain optimizations 
+        - Laziness : It means unless the terminal operation is called, streams wont be executed. Basically, it is lazy in nature
+        - Short Circuiting : It indicates the operations like anyMatch, allMatch, noneMatch
+> Internal Iteration 
+  - Processing of data is taken behind the seen. Developer doesn't know how internally it is getting iterated
+
+# Stream Operations
+> Intermediate Operations
+- Operations are lazily loaded and wont produce the result
+- It always returns stream<?> values
+    - filter(Predicate p)
+    - distinct() - Stateful Unbounded
+    - limit(Long number) - Stateful Bounded
+    - skip(Long number) - Stateful Bounded
+    - map(Function f)
+    - flatMap(Function f)
+    - sorted() - Stateful Unbounded
+
+> Terminal Operations
+- Operations are eagerly loaded and will produce the result
+- It always returns non-stream values
+    - forEach(Consumer c)
+    - count()
+    - collect(Collector c)
+    - allMatch(Predicate p)
+    - anyMatch(Predicate p)
+    - noneMatch(Predicate p)
+    - findAny(Predicate p)
+    - findFirst(Predicate p)
+    - reduce() - Stateful Bounded
+
+# Advantages
+> Declarative - More concise and readable
+> Composable - More Flexible
+> Parallelizable - Better Performance
+
+# Stateful Vs Stateless Operations
+> Stateful operations are those operations which depends on the internal state to accumalte result
+For Ex - Reduce operations needs to know the maximum salary of employee
+> Functions - distinct, limit, skip, sorted, reduce
+
+> Stateless operations are those operations which does not depend on the internal state to 
+accumalte result
+For Ex - Reduce operations needs to know the maximum salary of employee
+> Functions - filter, map etc..
+
+# Bounded Vs UnBounded Operations
+> Bounded operations are those operations which has a boundary
+For Ex - Get first three maximum salary of employee
+> Functions - limit, skip, sorted, reduce
+
+> UnBounded operations are those operations which does not have any boundary
+For Ex - Unique elements from the infinite number list
+> Functions - distinct, sorted etc..
+
+
+# Creating Finite Streams
+- It can be created directly or indirectly as mentioned below
+
+1. Stream.of("Rahul", "Sheth")
+2. Arrays.stream(new int[] {1, 2, 3})
+3. Stream<String> lines = Files.lines(Paths.get("Project File.txt"), Charset.defaultCharset())
+4. Collections.stream()
+5. Numeric Ranges
+- IntStream.range(start, end) OR IntStream.rangeClosed(start, end)
+- LongStream.range(start, end) OR LongStream.rangeClosed(start, end)
+
+
+# Creating InFinite Streams
+- Always limit the infinite streams 
+
+1. Stream.generate
+- It accepts the supplier
+[Java 8 & 11] - Stream.generate(() -> Math.random()).limit(5)
+
+2. Stream.iterate
+[Java 8]  - Stream.iterate(0, i -> i + 1).limit(5)
+[Java 11] - Stream.iterate(0, i -> i < 5, i -> i + 1) ----> Specialized

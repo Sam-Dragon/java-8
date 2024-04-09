@@ -1,0 +1,32 @@
+***************************************** PARALLEL STREAMS *************************************
+
+> Parallel Streams internally used FORKJOINPOOL. It allocates threads as many as processors
+> Streams which are marked as parallel are mainly used to work on multiple threads
+> It must be used for very huge data else performance issue can come
+> We can check the number of processors by using the following command
+    - Runtime.getRuntime().availableProcessors()
+> We can modify the size of the pool by using system property but it is not recommended
+    - java.util.concurrent.ForkJoinPool.common.parallelism
+
+# Stream Convert
+> Stream type is decided based on the last function called.
+> In order to convert parallel to sequential stream. Use method called as
+    - sequential()
+> In order to convert sequential to parallel stream. Use method called as
+    - parallel()
+
+# Best Performance Collection & Methods
+> Collection - ArrayList, HashSet, TreeSet
+> Method - LongStream.range / rangeClosed
+
+# Worst Performance Collection & Methods
+> Collection - LinkedList
+> Method - Stream.iterate
+
+# Rules
+> Turning sequential to parallel is not good idea. It can hit the performance
+> Boxing can hit performance badly. So use primitive specializations like IntStream, LongStream
+which prevents boxing costs
+> Bad to perform parallel stream on operations such as findFirst, limit etc..
+> Never use parallel streams for small amount of data
+> SIZED stream gives better performance compared to infinite one
