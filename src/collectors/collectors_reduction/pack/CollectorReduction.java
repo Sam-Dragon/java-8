@@ -26,22 +26,29 @@ public class CollectorReduction {
     }
 
     private static void countingEmployees(List<Dish> dishes) {
-        Optional<Integer> count = dishes.stream().map(d -> 1).collect(Collectors.reducing(Integer::sum));
+        Optional<Integer> count = dishes.stream()
+                .map(d -> 1)
+                .collect(Collectors.reducing(Integer::sum));
         System.out.println(count.get());
     }
 
     private static void sumCaloriesOfEmployees(List<Dish> dishes) {
-        Integer sum = dishes.stream().map(Dish::getCalories).collect(Collectors.reducing(0, Integer::sum));
+        Integer sum = dishes.stream()
+                .map(Dish::getCalories)
+                .collect(Collectors.reducing(0, Integer::sum));
         System.out.println(sum);
     }
 
     private static void maximumCaloriesOfEmployee(List<Dish> employees) {
-        Integer max = employees.stream().collect(Collectors.reducing(0, Dish::getCalories, Integer::max));
+        Integer max = employees.stream()
+                .collect(Collectors.reducing(0, Dish::getCalories, Integer::max));
         System.out.println(max);
     }
 
     private static void minimumCaloriesOfEmployee(List<Dish> employees) {
-        Integer min = employees.stream().map(Dish::getCalories).collect(Collectors.reducing(0, Integer::min));
+        Integer min = employees.stream()
+                .map(Dish::getCalories)
+                .collect(Collectors.reducing(0, Integer::min));
         System.out.println(min);
     }
 

@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 public class GetMenuWithBothTypeOfDishes {
 
     public static void main(String[] args) {
-        Map<Boolean, List<String>> menu = Dish.menu().stream()
+        Map<Boolean, List<String>> menu = Dish.menu()
+                .stream()
                 .collect(Collectors.partitioningBy(Dish::isVegetarian,
                         Collectors.mapping(Dish::getName, Collectors.toList())));
 

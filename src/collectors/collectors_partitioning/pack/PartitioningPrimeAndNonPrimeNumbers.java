@@ -12,12 +12,14 @@ public class PartitioningPrimeAndNonPrimeNumbers {
     }
 
     public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
-        return IntStream.rangeClosed(2, n).boxed()
+        return IntStream.rangeClosed(2, n)
+                .boxed()
                 .collect(Collectors.partitioningBy(PartitioningPrimeAndNonPrimeNumbers::isPrime));
     }
 
     public static boolean isPrime(int n) {
         int root = (int) Math.sqrt(n);
-        return IntStream.rangeClosed(2, root).noneMatch(i -> n % i == 0);
+        return IntStream.rangeClosed(2, root)
+                .noneMatch(i -> n % i == 0);
     }
 }

@@ -31,18 +31,21 @@ public class FunctionExample {
     }
 
     private static void identity(String name, Integer age) {
-        String string = (String) Function.identity().apply(name);
+        String string = (String) Function.identity()
+                .apply(name);
         System.out.println(string);
 
-        Integer number = (Integer) Function.identity().apply(age);
+        Integer number = (Integer) Function.identity()
+                .apply(age);
         System.out.println(number);
 
-        Employee employee = (Employee) Function.identity().apply(new Employee());
+        Employee employee = (Employee) Function.identity()
+                .apply(new Employee());
         System.out.println(employee);
     }
 
     private static void apply(Function<String, String> stringFunction, Function<Integer, Integer> numberFunction,
-            String name, Integer age) {
+                              String name, Integer age) {
         String string = stringFunction.apply(name);
         System.out.println(string);
 
@@ -51,8 +54,8 @@ public class FunctionExample {
     }
 
     private static void andThen(Function<String, String> stringFunction, Function<Integer, Integer> numberFunction,
-            Function<String, String> stringAnotherFunction, Function<Integer, Integer> numberAnotherFunction,
-            String name, Integer age) {
+                                Function<String, String> stringAnotherFunction, Function<Integer, Integer> numberAnotherFunction,
+                                String name, Integer age) {
         // stringFunction.andThen(numberFunction)
 
         Function<String, String> andThenFunction = stringFunction.andThen(stringAnotherFunction);
@@ -63,8 +66,8 @@ public class FunctionExample {
     }
 
     private static void compose(Function<String, String> stringFunction, Function<Integer, Integer> numberFunction,
-            Function<String, String> stringAnotherFunction, Function<Integer, Integer> numberAnotherFunction,
-            String name, Integer age) {
+                                Function<String, String> stringAnotherFunction, Function<Integer, Integer> numberAnotherFunction,
+                                String name, Integer age) {
         // stringFunction.andThen(numberFunction)
 
         Function<String, String> andThenFunction = stringFunction.compose(stringAnotherFunction);

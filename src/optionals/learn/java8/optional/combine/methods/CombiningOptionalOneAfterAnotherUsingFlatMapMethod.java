@@ -33,7 +33,8 @@ public class CombiningOptionalOneAfterAnotherUsingFlatMapMethod {
     }
 
     private static String checkTheEquivalentResult(Optional<Person> optionalPerson, Optional<Car> optionalCar) {
-        return optionalPerson.flatMap(person -> optionalCar.map(car -> findResult(person, car))).orElse("Empty");
+        return optionalPerson.flatMap(person -> optionalCar.map(car -> findResult(person, car)))
+                .orElse("Empty");
     }
 
     private static String findResult(Person person, Car car) {

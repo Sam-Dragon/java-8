@@ -8,10 +8,12 @@ public class TerminalOperations {
 
     public static void main(String[] args) {
         System.out.println("Intermediate Operations");
-        Stream<String> dishes = Dish.menu().stream().map(d -> {
-            System.out.println("Print only when terminal operation is called");
-            return d.getName();
-        });
+        Stream<String> dishes = Dish.menu()
+                .stream()
+                .map(d -> {
+                    System.out.println("Print only when terminal operation is called");
+                    return d.getName();
+                });
         System.out.println("Dishes :: " + dishes);
 
         System.out.println("\n<<<<<<<<<<< >>>>>>>>>>>>");

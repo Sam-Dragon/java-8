@@ -24,14 +24,14 @@ public class BiConsumerExample {
     }
 
     public static void accept(BiConsumer<String, String> stringConsumer, BiConsumer<Integer, Integer> integerConsumer,
-            String string, String string2, Integer integer, Integer integer2) {
+                              String string, String string2, Integer integer, Integer integer2) {
         stringConsumer.accept(string, string2);
         integerConsumer.accept(integer, integer2);
     }
 
     private static void andThen(BiConsumer<String, String> stringConsumer, BiConsumer<Integer, Integer> integerConsumer,
-            BiConsumer<String, String> stringAnotherConsumer, String string, String string2, Integer integer,
-            Integer integer2) {
+                                BiConsumer<String, String> stringAnotherConsumer, String string, String string2, Integer integer,
+                                Integer integer2) {
         stringConsumer.accept(string, string2);
         stringAnotherConsumer.accept(string, string2);
 

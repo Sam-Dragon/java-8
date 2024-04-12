@@ -15,7 +15,8 @@ public class CollectorsGrouping {
     public static void main(String[] args) {
 
         System.out.println("Single Grouping By Employee Name");
-        Map<String, List<Employee>> employeeMap = Employee.employees().stream()
+        Map<String, List<Employee>> employeeMap = Employee.employees()
+                .stream()
                 .collect(Collectors.groupingBy(Employee::getName));
 
         employeeMap.forEach((k, v) -> System.out.println(k + " : " + v));

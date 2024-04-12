@@ -17,21 +17,31 @@ public class ComparatorInterfaceNullSortingExample {
 
     private static void sortByStreamNullFirst() {
         System.out.println("Before Sorting");
-        Employee.employeeList().stream().forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name Null First - ASC");
-        Employee.employeeList().stream().sorted(
+        Employee.employeeList()
+                .stream()
+                .sorted(
                         Comparator.nullsFirst(Comparator.comparing(Employee::getName)))
-                .collect(Collectors.toList()).forEach(System.out::println);
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
     private static void sortByStreamNullLast() {
         System.out.println("Before Sorting");
-        Employee.employeeList().stream().forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name Null Last - ASC");
-        Employee.employeeList().stream().sorted(Comparator.nullsLast(Comparator.comparing(Employee::getName)))
-                .collect(Collectors.toList()).forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .sorted(Comparator.nullsLast(Comparator.comparing(Employee::getName)))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
 }

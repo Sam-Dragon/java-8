@@ -27,10 +27,12 @@ public class PrimitiveSpecializationUnaryOperatorExample {
     }
 
     private static void identity(Integer age) {
-        Integer number = (Integer) UnaryOperator.identity().apply(age);
+        Integer number = (Integer) UnaryOperator.identity()
+                .apply(age);
         System.out.println(number);
 
-        Employee employee = (Employee) UnaryOperator.identity().apply(new Employee());
+        Employee employee = (Employee) UnaryOperator.identity()
+                .apply(new Employee());
         System.out.println(employee);
     }
 
@@ -40,13 +42,13 @@ public class PrimitiveSpecializationUnaryOperatorExample {
     }
 
     private static void andThen(IntUnaryOperator numberUnaryOperator, IntUnaryOperator numberUnaryAnotherOperator,
-            Integer age) {
+                                Integer age) {
         IntUnaryOperator andThenNumberUnaryOperator = numberUnaryOperator.andThen(numberUnaryAnotherOperator);
         System.out.println(andThenNumberUnaryOperator.applyAsInt(age));
     }
 
     private static void compose(IntUnaryOperator numberUnaryOperator, IntUnaryOperator numberUnaryAnotherOperator,
-            Integer age) {
+                                Integer age) {
         IntUnaryOperator andThenNumberUnaryOperator = numberUnaryOperator.compose(numberUnaryAnotherOperator);
         System.out.println(andThenNumberUnaryOperator.applyAsInt(age));
     }

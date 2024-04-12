@@ -1,16 +1,6 @@
 package src.lamda.function_interface.pack;
 
-import java.util.function.DoubleFunction;
-import java.util.function.Function;
-import java.util.function.IntFunction;
-import java.util.function.IntToDoubleFunction;
-import java.util.function.IntToLongFunction;
-import java.util.function.LongFunction;
-import java.util.function.LongToDoubleFunction;
-import java.util.function.LongToIntFunction;
-import java.util.function.ToDoubleFunction;
-import java.util.function.ToIntFunction;
-import java.util.function.ToLongFunction;
+import java.util.function.*;
 
 public class PrimitiveSpecializationFunction {
 
@@ -63,7 +53,7 @@ public class PrimitiveSpecializationFunction {
 
     public static void LongToDobuleFunctionPrimitiveSpecialization() {
         int intNumber = 10;
-        LongToDoubleFunction longToDoubleFunction = n -> (long) n / 2;
+        LongToDoubleFunction longToDoubleFunction = n -> n / 2;
         System.out.println("Is Number = [" + intNumber + "] even ? " + (longToDoubleFunction.applyAsDouble(intNumber)));
     }
 

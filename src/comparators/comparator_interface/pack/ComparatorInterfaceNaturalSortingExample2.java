@@ -14,26 +14,37 @@ public class ComparatorInterfaceNaturalSortingExample2 {
 
     private static void sortByStreamNaturalOrder() {
         System.out.println("Before Sorting");
-        Employee.employeeList().stream().forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name Natural Order - ASC");
-        Employee.employeeList().stream().sorted(
+        Employee.employeeList()
+                .stream()
+                .sorted(
                         Comparator.comparing(Employee::getId,
                                 Comparator.naturalOrder()))
-                .collect(Collectors.toList()).forEach(System.out::println);
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name - ASC");
-        Employee.employeeList().stream().sorted(
+        Employee.employeeList()
+                .stream()
+                .sorted(
                         Comparator.comparing(Employee::getId))
-                .collect(Collectors.toList()).forEach(System.out::println);
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name - ASC [Comparable Implemented]");
 //        EmployeeImplmementsComparable.employeeList().stream().sorted()
 //                .collect(Collectors.toList()).forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name - ASC [Exception Thrown]");
-        Employee.employeeList().stream().sorted()
-                .collect(Collectors.toList()).forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .sorted()
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
 
 
     }

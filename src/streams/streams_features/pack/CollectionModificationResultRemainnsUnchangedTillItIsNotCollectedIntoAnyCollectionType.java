@@ -11,7 +11,9 @@ public class CollectionModificationResultRemainnsUnchangedTillItIsNotCollectedIn
         System.out.println("Before Streaming :: " + numbers);
 
         System.out.println("Applying Streams");
-        numbers.stream().filter(e -> e % 2 == 0).collect(Collectors.toList());
+        numbers.stream()
+                .filter(e -> e % 2 == 0)
+                .collect(Collectors.toList());
 
         System.out.println("After Streaming :: " + numbers);
     }

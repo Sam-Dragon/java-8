@@ -1,7 +1,6 @@
 package src.lamda.method_references.pack;
 
 import java.util.Comparator;
-import java.util.function.BiFunction;
 
 public class MethodReferencesApplicable {
 

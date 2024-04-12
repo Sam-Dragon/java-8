@@ -11,8 +11,12 @@ public class PredicateExample {
     public static void main(String[] args) {
         // Predicate<void> predicate = () -> System.out.print("Hello World");
 
-        Predicate<Employee> employeeSalaryPredicate = e -> e.getSalary().compareTo(BigDecimal.valueOf(7500000)) >= 0;
-        System.out.println(Employee.employees().stream().filter(employeeSalaryPredicate).collect(Collectors.toList()));
+        Predicate<Employee> employeeSalaryPredicate = e -> e.getSalary()
+                .compareTo(BigDecimal.valueOf(7500000)) >= 0;
+        System.out.println(Employee.employees()
+                .stream()
+                .filter(employeeSalaryPredicate)
+                .collect(Collectors.toList()));
 
         Predicate<String> stringPredicate = (String s) -> s.length() > 10;
         Predicate<String> stringAnotherPredicate = s -> s.length() < 10;
@@ -38,7 +42,7 @@ public class PredicateExample {
     }
 
     public static void test(Predicate<String> stringPredicate, Predicate<Integer> integerPredicate, String string,
-            Integer integer) {
+                            Integer integer) {
         boolean result = stringPredicate.test(string);
         System.out.println("String [" + stringPredicate + "].length(" + string.length() + ") > 10 = " + result);
 
@@ -56,7 +60,7 @@ public class PredicateExample {
     }
 
     private static void isEqual(Predicate<String> stringPredicate, Predicate<Integer> integerPredicate, String string,
-            Integer integer) {
+                                Integer integer) {
         boolean result = stringPredicate.equals(integerPredicate);
         System.out.println(stringPredicate + " == " + integerPredicate + " ? " + result);
 
@@ -68,7 +72,7 @@ public class PredicateExample {
     }
 
     private static void and(Predicate<String> stringPredicate, Predicate<Integer> integerPredicate,
-            Predicate<String> stringAnotherPredicate, String string, Integer integer) {
+                            Predicate<String> stringAnotherPredicate, String string, Integer integer) {
         boolean initialResult = stringPredicate.test(string);
         System.out.println("String [" + string + "].length(" + string.length() + ") > 10 = " + initialResult);
 
@@ -78,11 +82,11 @@ public class PredicateExample {
         // Similar datatype predicate can be combined
         // stringPredicate.and(integerPredicate);
         Predicate<String> condition = stringPredicate.and(stringAnotherPredicate);
-        System.out.println("Condition =" + condition.toString() + ", Result = " + condition.test(string));
+        System.out.println("Condition =" + condition + ", Result = " + condition.test(string));
     }
 
     private static void or(Predicate<String> stringPredicate, Predicate<Integer> integerPredicate,
-            Predicate<String> stringAnotherPredicate, String string, Integer integer) {
+                           Predicate<String> stringAnotherPredicate, String string, Integer integer) {
         boolean initialResult = stringPredicate.test(string);
         System.out.println("String [" + string + "].length(" + string.length() + ") > 10 = " + initialResult);
 
@@ -92,7 +96,7 @@ public class PredicateExample {
         // Similar datatype predicate can be combined
         // stringPredicate.or(integerPredicate);
         Predicate<String> condition = stringPredicate.or(stringAnotherPredicate);
-        System.out.println("Condition =" + condition.toString() + ", Result = " + condition.test(string));
+        System.out.println("Condition =" + condition + ", Result = " + condition.test(string));
     }
 
 }

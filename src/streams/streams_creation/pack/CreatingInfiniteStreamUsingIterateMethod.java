@@ -6,7 +6,8 @@ public class CreatingInfiniteStreamUsingIterateMethod {
 
     public static void main(String[] args) {
         System.out.println("Iterate method with initial value & increment ");
-        Stream.iterate(1, i -> i + 1).limit(5)
+        Stream.iterate(1, i -> i + 1)
+                .limit(5)
                 .forEach(i -> System.out.print(i + ", "));
 
         System.out.println("\n\nIterate method with initial value & increment ");

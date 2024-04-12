@@ -23,7 +23,8 @@ public class CollectorsCounting {
     }
 
     private static void countingEmployees(List<Employee> employees) {
-        Long count = employees.stream().collect(Collectors.counting());
+        Long count = employees.stream()
+                .collect(Collectors.counting());
         System.out.println("Employee Count :: " + count);
     }
 
@@ -34,8 +35,9 @@ public class CollectorsCounting {
     }
 
     private static void countingEmployeesByNameWithMapping(List<Employee> employees) {
-        Map<String, Long> employeeNameWithCount = employees.stream().collect(
-                Collectors.groupingBy(Employee::getName, Collectors.mapping(Employee::getId, Collectors.counting())));
+        Map<String, Long> employeeNameWithCount = employees.stream()
+                .collect(
+                        Collectors.groupingBy(Employee::getName, Collectors.mapping(Employee::getId, Collectors.counting())));
         System.out.println("Employee Name with Count :: " + employeeNameWithCount);
     }
 

@@ -11,7 +11,8 @@ import java.util.stream.Collectors;
 public class PartitioningByDishCaloriesAndCollectingAndThen {
 
     public static void main(String[] args) {
-        Map<Boolean, Dish> vegetarianDishesWithMaxCalories = Dish.menu().stream()
+        Map<Boolean, Dish> vegetarianDishesWithMaxCalories = Dish.menu()
+                .stream()
                 .collect(Collectors.partitioningBy(Dish::isVegetarian, Collectors
                         .collectingAndThen(Collectors.maxBy(Comparator.comparing(Dish::getCalories)), Optional::get)));
 

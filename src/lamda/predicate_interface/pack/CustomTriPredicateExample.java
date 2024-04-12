@@ -12,7 +12,7 @@ public class CustomTriPredicateExample {
         final int stringLength = 5;
         String s1 = "S1", s2 = "S2", s3 = "S3";
         TriPredicateInterface<String, String, String> stringTriPredicate = (a, b,
-                c) -> (a + b + c).length() > stringLength;
+                                                                            c) -> (a + b + c).length() > stringLength;
         System.out.println(s1 + " + " + s2 + " + " + s3 + " .length() > " + stringLength + " ? "
                 + stringTriPredicate.test(s1, s2, s3));
     }

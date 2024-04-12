@@ -13,15 +13,18 @@ public class CombiningOptionals {
         Optional<Person> person = Optional.of(new Person());
         Optional<Car> car = Optional.of(new Car());
 
-        String insurance = combiningOptionals.getCheapInsuranceUsingFlatMap(person, car).map(Insurance::getName)
+        String insurance = combiningOptionals.getCheapInsuranceUsingFlatMap(person, car)
+                .map(Insurance::getName)
                 .orElse("++ Empty");
         System.out.println(insurance);
 
         insurance = combiningOptionals.getCheapInsuranceUsingFlatMap(Optional.empty(), Optional.empty())
-                .map(Insurance::getName).orElse(">> Empty");
+                .map(Insurance::getName)
+                .orElse(">> Empty");
         System.out.println(insurance);
 
-        insurance = combiningOptionals.getCheapInsuranceUsingFlatMap(null, null).map(Insurance::getName)
+        insurance = combiningOptionals.getCheapInsuranceUsingFlatMap(null, null)
+                .map(Insurance::getName)
                 .orElse("<< Empty");
         System.out.println(insurance);
     }

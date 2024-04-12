@@ -9,7 +9,9 @@ public class ConvertingPrimitiveStreamsToObjectStream {
 
     public static void main(String[] args) {
         System.out.println("Primitive Streams");
-        IntStream intStream = Dish.menu().stream().mapToInt(Dish::getCalories);
+        IntStream intStream = Dish.menu()
+                .stream()
+                .mapToInt(Dish::getCalories);
         System.out.println(intStream);
 
         System.out.println("\nConverting Primitive Streams To Object Stream");

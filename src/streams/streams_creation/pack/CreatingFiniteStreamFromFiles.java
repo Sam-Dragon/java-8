@@ -10,7 +10,8 @@ public class CreatingFiniteStreamFromFiles {
     public static void main(String[] args) {
 
         try (Stream<String> lines = Files.lines(Paths.get("Project File.txt"), Charset.defaultCharset())) {
-            long uniqueWords = lines/* .flatMap(line -> Arrays.stream(line.split(" "))) */.distinct().count();
+            long uniqueWords = lines/* .flatMap(line -> Arrays.stream(line.split(" "))) */.distinct()
+                    .count();
             System.out.println("Unique Words = " + uniqueWords);
 
             // lines.flatMap(line -> Arrays.stream(line.split("

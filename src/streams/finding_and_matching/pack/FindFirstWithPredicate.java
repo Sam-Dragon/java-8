@@ -17,10 +17,10 @@ public class FindFirstWithPredicate implements Runnable {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        
+
         t = new Thread(new FindAnyWithPredicate());
         t.start();
-        
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e1) {
@@ -34,7 +34,10 @@ public class FindFirstWithPredicate implements Runnable {
 
     @Override
     public void run() {
-        Optional<Employee> findFirstEmployee = Employee.employees().stream().filter(e -> e.getSalary().compareTo(BigDecimal.valueOf(55000)) > 0)
+        Optional<Employee> findFirstEmployee = Employee.employees()
+                .stream()
+                .filter(e -> e.getSalary()
+                        .compareTo(BigDecimal.valueOf(55000)) > 0)
                 .findFirst();
         System.out.println(findFirstEmployee);
     }

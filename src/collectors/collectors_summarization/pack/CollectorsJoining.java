@@ -21,19 +21,25 @@ public class CollectorsJoining {
     }
 
     private static void joinByName(List<Employee> employees) {
-        String concatenatedEmployees = employees.stream().map(Employee::getName).distinct()
+        String concatenatedEmployees = employees.stream()
+                .map(Employee::getName)
+                .distinct()
                 .collect(Collectors.joining());
         System.out.println(concatenatedEmployees);
     }
 
     private static void joinByNameWithDelimiter(List<Employee> employees) {
-        String concatenatedEmployees = employees.stream().map(Employee::getName).distinct()
+        String concatenatedEmployees = employees.stream()
+                .map(Employee::getName)
+                .distinct()
                 .collect(Collectors.joining(","));
         System.out.println(concatenatedEmployees);
     }
 
     private static void joinByNameWithPrefixDelimeterSuffix(List<Employee> employees) {
-        String concatenatedEmployees = employees.stream().map(Employee::getName).distinct()
+        String concatenatedEmployees = employees.stream()
+                .map(Employee::getName)
+                .distinct()
                 .collect(Collectors.joining(",", "{", "}"));
         System.out.println(concatenatedEmployees);
     }

@@ -1,0 +1,13 @@
+# Threads
+
+- To perform unit of task in faster way
+
+# creation
+- It can be created using Thread class, Runnable Interface, Callable Interface - [Not Recommended]
+- It must be created with Executor Service framework [Recommended]
+
+# Thread Types
+- User Threads: Thread created programmatically & lifecycle is handled by programmer
+& terminates when program ends
+- Deamon Threads: Thread created programmatically & lifecycle cannot be handled by programmer
+& are used for background process & it never ends

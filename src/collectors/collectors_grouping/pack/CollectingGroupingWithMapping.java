@@ -10,12 +10,14 @@ import java.util.stream.Collectors;
 public class CollectingGroupingWithMapping {
 
     public static void main(String[] args) {
-        Map<Dish.Type, List<String>> dishesNameByType = Dish.menu().stream()
+        Map<Dish.Type, List<String>> dishesNameByType = Dish.menu()
+                .stream()
                 .collect(Collectors.groupingBy(Dish::getType, Collectors.mapping(Dish::getName, Collectors.toList())));
 
         System.out.println(dishesNameByType);
 
-        Map<Dish.Type, List<CollectorGroupingWithEnums.Calories>> dishesCaloriesByType = Dish.menu().stream()
+        Map<Dish.Type, List<CollectorGroupingWithEnums.Calories>> dishesCaloriesByType = Dish.menu()
+                .stream()
                 .collect(Collectors.groupingBy(Dish::getType, Collectors.mapping(d -> {
                     if (d.getCalories() <= 400)
                         return CollectorGroupingWithEnums.Calories.DIET;

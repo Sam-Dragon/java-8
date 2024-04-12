@@ -32,11 +32,16 @@ public class ParallelPerformanceFails {
     }
 
     public static long parallelSum(long n) {
-        return Stream.iterate(1, i -> i + 1).limit(n).parallel().reduce(0, Integer::sum);
+        return Stream.iterate(1, i -> i + 1)
+                .limit(n)
+                .parallel()
+                .reduce(0, Integer::sum);
     }
 
     public static long sequentialSum(long n) {
-        return Stream.iterate(1, i -> i + 1).limit(n).reduce(0, Integer::sum);
+        return Stream.iterate(1, i -> i + 1)
+                .limit(n)
+                .reduce(0, Integer::sum);
     }
 
     public static long iterativeSum(long n) {

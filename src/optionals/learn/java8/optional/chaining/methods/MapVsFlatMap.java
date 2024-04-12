@@ -11,13 +11,17 @@ public class MapVsFlatMap {
     public static void main(String[] args) {
         Person person = new Person(Optional.empty());
 
-        String insurance = Optional.ofNullable(person).flatMap(Person::getCar).flatMap(Car::getInsurance)
-                .map(Insurance::getName).orElse("No Insurance");
+        String insurance = Optional.ofNullable(person)
+                .flatMap(Person::getCar)
+                .flatMap(Car::getInsurance)
+                .map(Insurance::getName)
+                .orElse("No Insurance");
         System.out.println("FlatMap Insurance :: " + insurance);
 
         Optional<Person> optionalPerson = Optional.of(new Person());
         Optional<Car> optionalCar = Optional.of(new Car());
-        insurance = (String) optionalPerson.map(p -> optionalCar.map(car -> findResult(p, car)).orElse("Car Empty"))
+        insurance = (String) optionalPerson.map(p -> optionalCar.map(car -> findResult(p, car))
+                        .orElse("Car Empty"))
                 .orElse("Person Empty");
         System.out.println("FlatMap Insurance :: " + insurance);
     }

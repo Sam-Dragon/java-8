@@ -24,11 +24,13 @@ public class BinaryOperatorExample {
     }
 
     private static Employee maxBy(Employee e1, Employee e2) {
-        return BinaryOperator.maxBy(Comparator.comparing(Employee::getSalary)).apply(e1, e2);
+        return BinaryOperator.maxBy(Comparator.comparing(Employee::getSalary))
+                .apply(e1, e2);
     }
 
     private static Employee minBy(Employee e1, Employee e2) {
-        return BinaryOperator.minBy(Comparator.comparing(Employee::getSalary)).apply(e1, e2);
+        return BinaryOperator.minBy(Comparator.comparing(Employee::getSalary))
+                .apply(e1, e2);
     }
 
 }

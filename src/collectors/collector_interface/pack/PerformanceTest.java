@@ -10,7 +10,9 @@ public class PerformanceTest {
         Long fastest = Long.MAX_VALUE;
 
         long startTime = System.nanoTime();
-        Dish.menu().stream().collect(Collectors.toList());
+        Dish.menu()
+                .stream()
+                .collect(Collectors.toList());
         long duration = (System.nanoTime() - startTime) / 1_000_000;
         if (duration < fastest)
             fastest = duration;
@@ -18,7 +20,9 @@ public class PerformanceTest {
         System.out.println("Utility Execution Time :: " + fastest);
 
         startTime = System.nanoTime();
-        Dish.menu().stream().collect(new CustomCollectorToList<>());
+        Dish.menu()
+                .stream()
+                .collect(new CustomCollectorToList<>());
         duration = (System.nanoTime() - startTime) / 1_000_000;
         if (duration < fastest)
             fastest = duration;

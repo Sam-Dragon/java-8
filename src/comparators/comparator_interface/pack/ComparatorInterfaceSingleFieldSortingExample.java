@@ -23,50 +23,63 @@ public class ComparatorInterfaceSingleFieldSortingExample {
         List<Employee> employeeList = Employee.employeeList();
 
         System.out.println("Before Sorting");
-        employeeList.stream().forEach(System.out::println);
+        employeeList.stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[NORMAL] Sorting By Id - ASC");
         employeeList.sort(Comparator.comparing(Employee::getId));
         System.out.println(employeeList);
 
         System.out.println("\n[NORMAL] Sorting By Id - DESC");
-        employeeList.sort(Comparator.comparing(Employee::getId).reversed());
+        employeeList.sort(Comparator.comparing(Employee::getId)
+                .reversed());
         System.out.println(employeeList);
     }
 
     private static void sortByStream() {
         System.out.println("Before Sorting");
-        Employee.employeeList().stream().forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - ASC");
-        Employee.employeeList().stream()
+        Employee.employeeList()
+                .stream()
                 .sorted(Comparator.comparing(Employee::getId))
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - DESC");
-        Employee.employeeList().stream()
-                .sorted(Comparator.comparing(Employee::getId).reversed())
-                .collect(Collectors.toList()).forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .sorted(Comparator.comparing(Employee::getId)
+                        .reversed())
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
     private static void sortByStreamComprator() {
         System.out.println("Before Sorting");
-        Employee.employeeList().stream().forEach(System.out::println);
+        Employee.employeeList()
+                .stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - ASC");
-        Employee.employeeList().stream()
+        Employee.employeeList()
+                .stream()
                 .sorted(Comparator.comparing(Employee::getId))
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Id - DESC");
-        Employee.employeeList().stream()
+        Employee.employeeList()
+                .stream()
                 .sorted(Comparator.comparing(Employee::getId, Comparator.reverseOrder()))
                 // Change
                 // is
                 // here
-                .collect(Collectors.toList()).forEach(System.out::println);
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
 }

@@ -29,7 +29,8 @@ public class CombiningOptionalOneAfterAnotherUsingMapMethod {
     }
 
     private static String checkTheEquivalentResult(Optional<Person> optionalPerson, Optional<Car> optionalCar) {
-        return optionalPerson.map(person -> optionalCar.map(car -> findResult(person, car)).orElse("Car Empty"))
+        return optionalPerson.map(person -> optionalCar.map(car -> findResult(person, car))
+                        .orElse("Car Empty"))
                 .orElse("Person Empty");
     }
 

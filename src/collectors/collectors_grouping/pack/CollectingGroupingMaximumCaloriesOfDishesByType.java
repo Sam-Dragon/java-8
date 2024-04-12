@@ -11,8 +11,10 @@ import java.util.stream.Collectors;
 public class CollectingGroupingMaximumCaloriesOfDishesByType {
 
     public static void main(String[] args) {
-        Map<Type, Optional<Dish>> dishesCountByType = Dish.menu().stream().collect(
-                Collectors.groupingBy(Dish::getType, Collectors.maxBy(Comparator.comparing(Dish::getCalories))));
+        Map<Type, Optional<Dish>> dishesCountByType = Dish.menu()
+                .stream()
+                .collect(
+                        Collectors.groupingBy(Dish::getType, Collectors.maxBy(Comparator.comparing(Dish::getCalories))));
 
         System.out.println(dishesCountByType);
     }

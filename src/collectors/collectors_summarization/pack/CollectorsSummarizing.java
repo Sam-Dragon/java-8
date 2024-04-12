@@ -15,7 +15,8 @@ public class CollectorsSummarizing {
         List<Dish> dishes = Dish.menu();
 
         System.out.println("Summarizing Int");
-        IntSummaryStatistics distStatisticsInt = dishes.stream().collect(Collectors.summarizingInt(Dish::getCalories));
+        IntSummaryStatistics distStatisticsInt = dishes.stream()
+                .collect(Collectors.summarizingInt(Dish::getCalories));
         System.out.println("Total Calories = " + distStatisticsInt);
 
         System.out.println(distStatisticsInt.getCount());

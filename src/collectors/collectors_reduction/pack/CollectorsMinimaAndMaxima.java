@@ -34,8 +34,9 @@ public class CollectorsMinimaAndMaxima {
     }
 
     private static void maximumEmployeesByName(List<Employee> employees) {
-        Map<String, Optional<Employee>> employeeNameWithCount = employees.stream().collect(
-                Collectors.groupingBy(Employee::getName, Collectors.maxBy(Comparator.comparing(Employee::getSalary))));
+        Map<String, Optional<Employee>> employeeNameWithCount = employees.stream()
+                .collect(
+                        Collectors.groupingBy(Employee::getName, Collectors.maxBy(Comparator.comparing(Employee::getSalary))));
         System.out.println("Employee Name with Count :: " + employeeNameWithCount);
     }
 
@@ -46,8 +47,9 @@ public class CollectorsMinimaAndMaxima {
     }
 
     private static void minimumEmployeesByName(List<Employee> employees) {
-        Map<String, Optional<Employee>> employeeNameWithCount = employees.stream().collect(
-                Collectors.groupingBy(Employee::getName, Collectors.minBy(Comparator.comparing(Employee::getSalary))));
+        Map<String, Optional<Employee>> employeeNameWithCount = employees.stream()
+                .collect(
+                        Collectors.groupingBy(Employee::getName, Collectors.minBy(Comparator.comparing(Employee::getSalary))));
         System.out.println("Employee Name with Count :: " + employeeNameWithCount);
     }
 }

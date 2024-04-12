@@ -35,11 +35,14 @@ public class ParellelPerformanceImproved {
     }
 
     public static long parallelSum(long n) {
-        return LongStream.rangeClosed(1, n).parallel().reduce(0, Long::sum);
+        return LongStream.rangeClosed(1, n)
+                .parallel()
+                .reduce(0, Long::sum);
     }
 
     public static long sequencialSum(long n) {
-        return LongStream.rangeClosed(1, n).reduce(0, Long::sum);
+        return LongStream.rangeClosed(1, n)
+                .reduce(0, Long::sum);
     }
 
     public static long iterativeSum(long n) {

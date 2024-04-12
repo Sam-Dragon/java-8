@@ -11,7 +11,8 @@ public class CollectorsMultiLevelGrouping {
 
     public static void main(String[] args) {
         System.out.println("Multi Level Grouping By Employee Name Then by Mobile");
-        Map<String, Map<String, List<Employee>>> employeeMap = Employee.employees().stream()
+        Map<String, Map<String, List<Employee>>> employeeMap = Employee.employees()
+                .stream()
                 .collect(Collectors.groupingBy(Employee::getName, Collectors.groupingBy(Employee::getMobile)));
 
         employeeMap.forEach((k, v) -> System.out.println(k + " : " + v));

@@ -25,16 +25,16 @@ public class BiFunctionExample {
     }
 
     public static void apply(BiFunction<String, String, String> stringFunction,
-            BiFunction<Integer, Integer, Integer> integerFunction, String string, String string2, Integer integer,
-            Integer integer2) {
+                             BiFunction<Integer, Integer, Integer> integerFunction, String string, String string2, Integer integer,
+                             Integer integer2) {
         String stringResult = stringFunction.apply(string, string2);
         Integer integerResult = integerFunction.apply(integer, integer2);
         System.out.println(stringResult + " >> " + integerResult);
     }
 
     private static void andThen(BiFunction<String, String, String> stringFunction,
-            BiFunction<Integer, Integer, Integer> integerFunction, Function<String, String> stringAnotherFunction,
-            String string, String string2, Integer integer, Integer integer2) {
+                                BiFunction<Integer, Integer, Integer> integerFunction, Function<String, String> stringAnotherFunction,
+                                String string, String string2, Integer integer, Integer integer2) {
         String stringResult = stringFunction.apply(string, string2);
         String stringAnotherResult = stringAnotherFunction.apply(string);
         System.out.println(stringResult + " >> " + stringAnotherResult);

@@ -25,7 +25,7 @@ public class PrimitiveSpecializationBiConsumerExample {
     }
 
     private static void andThen(BiConsumer<Integer, Integer> integerBiConsumer,
-            BiConsumer<Integer, Integer> integerAnotherBiConsumer, Integer number10, Integer number100) {
+                                BiConsumer<Integer, Integer> integerAnotherBiConsumer, Integer number10, Integer number100) {
         integerBiConsumer.accept(number10, number100);
         integerAnotherBiConsumer.accept(number10, number100);
 

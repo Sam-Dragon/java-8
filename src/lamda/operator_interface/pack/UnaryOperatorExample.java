@@ -34,18 +34,21 @@ public class UnaryOperatorExample {
     }
 
     private static void identity(String name, Integer age) {
-        String string = (String) UnaryOperator.identity().apply(name);
+        String string = (String) UnaryOperator.identity()
+                .apply(name);
         System.out.println(string);
 
-        Integer number = (Integer) UnaryOperator.identity().apply(age);
+        Integer number = (Integer) UnaryOperator.identity()
+                .apply(age);
         System.out.println(number);
 
-        Employee employee = (Employee) UnaryOperator.identity().apply(new Employee());
+        Employee employee = (Employee) UnaryOperator.identity()
+                .apply(new Employee());
         System.out.println(employee);
     }
 
     private static void apply(UnaryOperator<String> stringUnaryOperator, UnaryOperator<Integer> numberUnaryOperator,
-            String name, Integer age) {
+                              String name, Integer age) {
         String string = stringUnaryOperator.apply(name);
         System.out.println(string);
 
@@ -54,8 +57,8 @@ public class UnaryOperatorExample {
     }
 
     private static void andThen(UnaryOperator<String> stringUnaryOperator, UnaryOperator<Integer> numberUnaryOperator,
-            UnaryOperator<String> stringUnaryAnotherOperator, UnaryOperator<Integer> numberUnaryAnotherOperator,
-            String name, Integer age) {
+                                UnaryOperator<String> stringUnaryAnotherOperator, UnaryOperator<Integer> numberUnaryAnotherOperator,
+                                String name, Integer age) {
         // stringUnaryOperator.andThen(numberUnaryOperator)
 
         Function<String, String> andThenUnaryOperator = stringUnaryOperator.andThen(stringUnaryAnotherOperator);
@@ -66,8 +69,8 @@ public class UnaryOperatorExample {
     }
 
     private static void compose(UnaryOperator<String> stringUnaryOperator, UnaryOperator<Integer> numberUnaryOperator,
-            UnaryOperator<String> stringUnaryAnotherOperator, UnaryOperator<Integer> numberUnaryAnotherOperator,
-            String name, Integer age) {
+                                UnaryOperator<String> stringUnaryAnotherOperator, UnaryOperator<Integer> numberUnaryAnotherOperator,
+                                String name, Integer age) {
         // stringUnaryOperator.andThen(numberUnaryOperator)
 
         Function<String, String> andThenUnaryOperator = stringUnaryOperator.compose(stringUnaryAnotherOperator);

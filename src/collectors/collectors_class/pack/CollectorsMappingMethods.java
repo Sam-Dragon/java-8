@@ -29,8 +29,10 @@ public class CollectorsMappingMethods {
     }
 
     private static void filteringEmployees(List<Employee> employees) {
-        Long count = employees.stream().collect(Collectors
-                .filtering(e -> e.getSalary().compareTo(BigDecimal.valueOf(2500000)) > 0, Collectors.counting()));
+        Long count = employees.stream()
+                .collect(Collectors
+                        .filtering(e -> e.getSalary()
+                                .compareTo(BigDecimal.valueOf(2500000)) > 0, Collectors.counting()));
         System.out.println("Employee Salary Count > 2500000 :: " + count);
     }
 
@@ -47,7 +49,8 @@ public class CollectorsMappingMethods {
     }
 
     private static void collectingAndThenEmployees(List<Employee> employees) {
-        Long employeeList = employees.stream().collect(Collectors.collectingAndThen(Collectors.counting(), e -> e * 2));
+        Long employeeList = employees.stream()
+                .collect(Collectors.collectingAndThen(Collectors.counting(), e -> e * 2));
         System.out.println("Employee Count * 2 :: " + employeeList);
     }
 }

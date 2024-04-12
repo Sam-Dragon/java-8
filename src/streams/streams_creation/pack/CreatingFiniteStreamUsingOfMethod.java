@@ -14,7 +14,7 @@ public class CreatingFiniteStreamUsingOfMethod {
         System.out.println(integerStream.collect(Collectors.toList()));
 
         System.out.println("\nStream of(Array)");
-        Integer[] arr = new Integer[] { 1, 2, 3 };
+        Integer[] arr = new Integer[]{1, 2, 3};
 
         // First way
         System.out.println("> First Way");
@@ -23,6 +23,7 @@ public class CreatingFiniteStreamUsingOfMethod {
 
         // Second way
         System.out.println("\n> Second Way");
-        Arrays.stream(arr).forEach(i -> System.out.print(i + ", "));
+        Arrays.stream(arr)
+                .forEach(i -> System.out.print(i + ", "));
     }
 }

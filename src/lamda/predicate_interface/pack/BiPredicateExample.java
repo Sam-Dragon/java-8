@@ -12,8 +12,10 @@ public class BiPredicateExample {
         // World");
 
         BiPredicate<Employee, Employee> employeeSalaryBiPredicate = (e,
-                                                                     e2) -> e.getSalary().compareTo(BigDecimal.valueOf(7500)) >= 0
-                        && e2.getSalary().compareTo(BigDecimal.valueOf(7500000)) >= 0;
+                                                                     e2) -> e.getSalary()
+                .compareTo(BigDecimal.valueOf(7500)) >= 0
+                && e2.getSalary()
+                .compareTo(BigDecimal.valueOf(7500000)) >= 0;
         System.out.println(employeeSalaryBiPredicate.test(
                 new Employee(1L, "Employee", "+919735672353", BigDecimal.valueOf(145120404)),
                 new Employee(2L, "Employee", "+919735672353", BigDecimal.valueOf(145120404))));
@@ -41,7 +43,7 @@ public class BiPredicateExample {
     }
 
     public static void test(BiPredicate<String, String> stringPredicate, BiPredicate<Integer, Integer> integerPredicate,
-            String string, String string2, Integer integer, Integer integer2) {
+                            String string, String string2, Integer integer, Integer integer2) {
         boolean result = stringPredicate.test(string, string2);
         System.out.println("String [" + stringPredicate + "].length(" + (string.length() + string2.length())
                 + ") > 10 = " + result);
@@ -62,8 +64,8 @@ public class BiPredicateExample {
     }
 
     private static void or(BiPredicate<String, String> stringPredicate, BiPredicate<Integer, Integer> integerPredicate,
-            BiPredicate<String, String> stringAnotherPredicate, String string, String string2, Integer integer,
-            Integer integer2) {
+                           BiPredicate<String, String> stringAnotherPredicate, String string, String string2, Integer integer,
+                           Integer integer2) {
         boolean initialResult = stringPredicate.test(string, string2);
         System.out.println(
                 "String [" + string + "].length(" + (string.length() + string2.length()) + ") > 10 = " + initialResult);
@@ -76,12 +78,12 @@ public class BiPredicateExample {
         // stringPredicate.and(integerPredicate);
 
         BiPredicate<String, String> condition = stringPredicate.or(stringAnotherPredicate);
-        System.out.println("Condition =" + condition.toString() + ", Result = " + condition.test(string, string2));
+        System.out.println("Condition =" + condition + ", Result = " + condition.test(string, string2));
     }
 
     private static void and(BiPredicate<String, String> stringPredicate, BiPredicate<Integer, Integer> integerPredicate,
-            BiPredicate<String, String> stringAnotherPredicate, String string, String string2, Integer integer,
-            Integer integer2) {
+                            BiPredicate<String, String> stringAnotherPredicate, String string, String string2, Integer integer,
+                            Integer integer2) {
         boolean initialResult = stringPredicate.test(string, string2);
         System.out.println(
                 "String [" + string + "].length(" + (string.length() + string2.length()) + ") > 10 = " + initialResult);
@@ -94,6 +96,6 @@ public class BiPredicateExample {
         // stringPredicate.and(integerPredicate);
 
         BiPredicate<String, String> condition = stringPredicate.and(stringAnotherPredicate);
-        System.out.println("Condition =" + condition.toString() + ", Result = " + condition.test(string, string2));
+        System.out.println("Condition =" + condition + ", Result = " + condition.test(string, string2));
     }
 }

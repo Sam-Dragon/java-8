@@ -7,12 +7,14 @@ public class ConcurrentModificationInStreams {
     public static void main(String[] args) {
         var list = Arrays.asList("Ram", "Sam", "Tom", "Tim");
 
-        list.stream().map(n -> {
-            if (n.equalsIgnoreCase("RAM"))
-                list.remove(n);
+        list.stream()
+                .map(n -> {
+                    if (n.equalsIgnoreCase("RAM"))
+                        list.remove(n);
 
-            return n.toLowerCase();
-        }).collect(Collectors.toList());
+                    return n.toLowerCase();
+                })
+                .collect(Collectors.toList());
 
     }
 }

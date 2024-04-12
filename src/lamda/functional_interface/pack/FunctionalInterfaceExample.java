@@ -15,8 +15,12 @@ public class FunctionalInterfaceExample {
         System.out.println("\nBEFORE");
         System.out.println(Employee.employees());
 
-        Comparator<Employee> sortByName = (a, b) -> a.getName().compareToIgnoreCase(b.getName());
-        List<Employee> Updatedemployees = Employee.employees().stream().sorted(sortByName).collect(Collectors.toList());
+        Comparator<Employee> sortByName = (a, b) -> a.getName()
+                .compareToIgnoreCase(b.getName());
+        List<Employee> Updatedemployees = Employee.employees()
+                .stream()
+                .sorted(sortByName)
+                .collect(Collectors.toList());
 
         System.out.println("\nAFTER");
         System.out.println(Updatedemployees);

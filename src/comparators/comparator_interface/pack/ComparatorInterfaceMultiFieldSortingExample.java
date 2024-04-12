@@ -14,13 +14,18 @@ public class ComparatorInterfaceMultiFieldSortingExample {
 
     private static void sortByStream() {
         System.out.println("Before Sorting");
-        Employee.employees().stream().forEach(System.out::println);
+        Employee.employees()
+                .stream()
+                .forEach(System.out::println);
 
         System.out.println("\n[STREAM] Sorting By Name then id - ASC");
-        Employee.employees().stream().sorted(
+        Employee.employees()
+                .stream()
+                .sorted(
                         Comparator.comparing(Employee::getName)
                                 .thenComparing(Employee::getId))
-                .collect(Collectors.toList()).forEach(System.out::println);
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 
 }

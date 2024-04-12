@@ -11,7 +11,8 @@ public class PartitioningByDishCaloriesAndFiltering {
 
     public static void main(String[] args) {
 
-        Map<Boolean, List<String>> vegetarianDishesWithMaxCalories = Dish.menu().stream()
+        Map<Boolean, List<String>> vegetarianDishesWithMaxCalories = Dish.menu()
+                .stream()
                 .collect(Collectors.partitioningBy(Dish::isVegetarian,
                         Collectors.filtering(Dish -> Dish.getCalories() > 500,
                                 Collectors.mapping(Dish::getName, Collectors.toList()))));

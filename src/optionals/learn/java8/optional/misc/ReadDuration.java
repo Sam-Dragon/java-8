@@ -25,8 +25,11 @@ public class ReadDuration {
     private static Integer readDuration(Properties properties, String name) {
 //		return Optional.ofNullable(name).map(properties::getProperty).map(ReadDuration::parseStringToNumber).orElse(0);
 
-        return Optional.ofNullable(name).map(properties::getProperty).flatMap(ReadDuration::stringToNumber)
-                .filter(i -> i > 0).orElse(0);
+        return Optional.ofNullable(name)
+                .map(properties::getProperty)
+                .flatMap(ReadDuration::stringToNumber)
+                .filter(i -> i > 0)
+                .orElse(0);
     }
 
     private static Optional<Integer> stringToNumber(String input) {

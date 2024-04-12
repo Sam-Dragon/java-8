@@ -48,7 +48,7 @@ public class PrimitiveSpecializationPredicateOperations {
         // Similar datatype predicate can be combined
         // stringPredicate.and(integerPredicate);
         IntPredicate condition = integer10Predicate.and(integer100Predicate);
-        System.out.println("Condition =" + condition.toString() + ", Result = " + condition.test(number100));
+        System.out.println("Condition =" + condition + ", Result = " + condition.test(number100));
     }
 
     private static void or(IntPredicate integer10Predicate, IntPredicate integer100Predicate, Integer number100) {
@@ -61,7 +61,7 @@ public class PrimitiveSpecializationPredicateOperations {
         // Similar datatype predicate can be combined
         // stringPredicate.and(integerPredicate);
         IntPredicate condition = integer10Predicate.or(integer100Predicate);
-        System.out.println("Condition =" + condition.toString() + ", Result = " + condition.test(number100));
+        System.out.println("Condition =" + condition + ", Result = " + condition.test(number100));
     }
 
 }
