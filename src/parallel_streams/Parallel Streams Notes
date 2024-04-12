@@ -17,7 +17,7 @@
 
 # Best Performance Collection & Methods
 > Collection - ArrayList, HashSet, TreeSet
-> Method - LongStream.range / rangeClosed
+> Method - IntStream.range / rangeClosed, LongStream.range / rangeClosed [All primitive streams]
 
 # Worst Performance Collection & Methods
 > Collection - LinkedList
@@ -27,6 +27,7 @@
 > Turning sequential to parallel is not good idea. It can hit the performance
 > Boxing can hit performance badly. So use primitive specializations like IntStream, LongStream
 which prevents boxing costs
-> Bad to perform parallel stream on operations such as findFirst, limit etc..
+> Bad to perform parallel stream on operations such as findFirst, limit etc.. rather use findAny()
 > Never use parallel streams for small amount of data
 > SIZED stream gives better performance compared to infinite one
+> Terminal operations also effects the usage of parallel stream
