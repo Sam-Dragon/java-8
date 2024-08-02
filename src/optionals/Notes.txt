@@ -51,3 +51,5 @@ operations
 - Never use OptionalInt, OptionalLong, OptionalDouble as it can contain single value
 - It can hit the performance
 - It may not allow all operations to work on it
+
+Note: Optionals must not be used as variables for models/entities as they are not serializable
