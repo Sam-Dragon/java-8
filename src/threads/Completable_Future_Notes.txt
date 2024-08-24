@@ -1,0 +1,14 @@
+> Limitations of future
+- combining multiple asynchronous operations into one
+- waiting for completion of all tasks or any single fastest task
+- programmatically completing the future
+- Reacting to the future completion
+
+# Completable Future
+
+> Advantages
+- create asynchronous pipeline
+- allows multiple tasks to be performed
+- waits for all the tasks to get the results
+- fetch the fastest tasks to get the initial result
+- programmatically complete the futures

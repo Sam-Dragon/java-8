@@ -1,0 +1,43 @@
+# POINTS
+
+# Comparators
+- It is used for sorting purpose
+- It overrides compare(Obj a, Obj b) method
+- It is used for custom sorting
+- It provides multiple sorting
+Ex - All custom sorting in projects
+
+# Composing Comparators
+1. Single Ascending Sort
+    > Collections using sort()
+    > Stream On Collections using sorted()
+        - Compartor.comparing(Object::getProperty)
+
+2. Single Descending Sort
+    > Collections using sort()
+    > Stream On Collections using sorted()
+        - Compartor.comparing(Object::getProperty).reversed()
+        - Compartor.comparing(Object::getProperty, Comparator.reversedOrder())
+
+# Chaining Comparators
+1. Multiple Ascending Sort
+    > Collections using sort()
+    > Stream On Collections using sorted()
+        - Compartor.comparing(Object::getProperty).thenComparing(Object::getProperty)
+
+2. Multiple Descending Sort
+    > Collections using sort()
+    > Stream On Collections using sorted()
+        - Compartor.comparing(Object::getProperty).reversed().thenComparing(Object::getProperty)
+
+        
+# Comparable
+- It is used for sorting purpose
+- It overrides compareTo(Obj a) method
+- It is used for default sorting
+- It provides single sort
+Ex - String, Wrapper classes
+
+# Used
+1. Comaprator.naturalOrder()
+i.e. stream().sorted() - internally implements comparable for sorting

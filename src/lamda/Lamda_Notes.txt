@@ -1,0 +1,66 @@
+**************************************** LAMDA EXPRESSION ******************************************
+[package lamda.pack]
+
+1. Definition
+- A concise representation of anonymous function which can be passed around
+    > Anonymous - function with no name
+    > Function - its like method which has arguments, body, return type & possibly exceptions
+    > Passed Around - it can be passed as argument to method or store in a variable
+    > Concise - to reduce boiler plate code
+
+2. Representation
+- parameters followed by arrow followed by lamda body
+- Single statement evaluation
+  (parameter)  -> expression / statement
+    |           |       |
+  (a, b)       -> a.getWeight().compareTo(b.getWeight)
+  (a, b)       ->  System.out.print(a + b) 
+                   
+- Multiple statement evaluation
+  (parameter)  -> { statements; }
+    |           |        |
+  (a, b)        -> {
+                        System.out.print("Compare") 
+                        return a.getWeight().compareTo(b.getWeight); 
+                   } 
+
+3. Lamda expression can have zero, one or more arguments
+i.e. ()     -> System.out.println("Hello World")
+      a     -> System.out.println(a)
+     (a)    -> System.out.println(a)
+     (a, b) -> System.out.println(a + b)
+
+3. Lamda Usage
+- It must be used wherever functional interface is expected
+- The target type or Return type of lamda is functional interface
+
+4. The lamda expression during compilation is converted to "private method" of the class
+& during runtime, it is linked directly to actual code
+
+5. Advantages
+    > Less verbose
+    > Code re-usability
+
+6. Passing arguments / objects to Lamda expression
+> Passing arguments 
+  (a, b) -> System.out.println(a + b)
+> Passing Objects 
+  Thread t = new Thread(() -> System.out.print("Hello World")); --> Calling runnable instance    
+    
+# Type Inference, Type Checking & Restrictions
+
+1. Type Inference - Java compiler resolves the functional interface to associate with lamda 
+expression based on surrounding context [target type]
+    > Improves the readability of the code
+
+i.e. MiInteface<Integer> mi = (int a, int b) -> System.out.println(a + b)
+                                    ||
+                                    \/
+     MiInteface<Integer> mi = (a, b) -> System.out.println(a + b)  
+        - Compiler identifies arguments type based on Functional Interface Target type
+    
+2. Type Checking - Compiler can deduce the target type based on functional interface 
+
+3. Restriction - Local Variables in lamda
+- Local variables in lamda must be only final or effectively final
+- It specifies the concept of closures [Local variables to method]
