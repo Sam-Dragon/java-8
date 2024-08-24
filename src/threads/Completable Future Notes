@@ -1,7 +1,0 @@
-# Completable Future
-
-> Limitations of future
-- combining multiple asynchronous operations into one
-- waiting for completion of all tasks or any single fastest task
-- programmatically completing the future
-- Reacting to the future completion
