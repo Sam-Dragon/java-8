@@ -1,4 +1,4 @@
-package src.lamda.consumer_interface.pack;
+package lamda.consumer_interface.pack;
 
 @FunctionalInterface
 public interface TriConsumerInterface<T, Q, R> {

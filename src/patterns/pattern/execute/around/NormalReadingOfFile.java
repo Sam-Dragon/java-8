@@ -1,4 +1,4 @@
-package src.patterns.pattern.execute.around;
+package patterns.pattern.execute.around;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

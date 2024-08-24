@@ -1,6 +1,6 @@
-package src.streams.streams_creation.pack;
+package streams.streams_creation.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Arrays;
 

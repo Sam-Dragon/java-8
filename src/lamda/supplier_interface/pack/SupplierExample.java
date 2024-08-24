@@ -1,6 +1,6 @@
-package src.lamda.supplier_interface.pack;
+package lamda.supplier_interface.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.function.Supplier;
 

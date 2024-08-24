@@ -1,6 +1,6 @@
-package src.comparators.comparator_interface.pack;
+package comparators.comparator_interface.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Comparator;
 import java.util.List;

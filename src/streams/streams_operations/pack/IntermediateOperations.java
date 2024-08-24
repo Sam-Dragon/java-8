@@ -1,6 +1,6 @@
-package src.streams.streams_operations.pack;
+package streams.streams_operations.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.stream.Stream;
 

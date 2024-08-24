@@ -1,4 +1,4 @@
-package src.optionals.learn.java8.optional.chaining.methods;
+package optionals.learn.java8.optional.chaining.methods;
 
 import java.util.Optional;
 

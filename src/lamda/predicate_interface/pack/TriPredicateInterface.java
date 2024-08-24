@@ -1,4 +1,4 @@
-package src.lamda.predicate_interface.pack;
+package lamda.predicate_interface.pack;
 
 @FunctionalInterface
 public interface TriPredicateInterface<T, Q, R> {

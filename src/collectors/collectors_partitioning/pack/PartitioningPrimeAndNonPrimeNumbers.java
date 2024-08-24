@@ -1,4 +1,4 @@
-package src.collectors.collectors_partitioning.pack;
+package collectors.collectors_partitioning.pack;
 
 import java.util.List;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package src.streams.conversion_streams.pack;
+package streams.conversion_streams.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.Arrays;
 

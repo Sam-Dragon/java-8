@@ -1,6 +1,6 @@
-package src.optionals.learn.java8.optional.chaining.methods;
+package optionals.learn.java8.optional.chaining.methods;
 
-import src.model.Insurance;
+import model.Insurance;
 
 import java.util.Optional;
 

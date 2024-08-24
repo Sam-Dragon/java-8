@@ -1,4 +1,4 @@
-package src.default_methods.multiple_inheritance.diamond_problem.pack;
+package default_methods.multiple_inheritance.diamond_problem.pack;
 
 public class ClassWithDiamondProblemOfDeath implements InterfaceWithDefaultAndStaticMethodsParentFather,
         InterfaceWithDefaultAndStaticMethodsParentMother, InterfaceWithDefaultAndStaticMethodsParentGrandFather {

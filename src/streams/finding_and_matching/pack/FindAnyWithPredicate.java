@@ -1,6 +1,6 @@
-package src.streams.finding_and_matching.pack;
+package streams.finding_and_matching.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.math.BigDecimal;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package src.lamda.method_references.pack;
+package lamda.method_references.pack;
 
 import java.util.function.Function;
 import java.util.function.Supplier;

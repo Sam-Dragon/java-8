@@ -1,4 +1,4 @@
-package src.optionals.learn.java8.optional.unwrapping.methods;
+package optionals.learn.java8.optional.unwrapping.methods;
 
 import java.util.Optional;
 

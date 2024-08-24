@@ -1,4 +1,4 @@
-package src.optionals.learn.java8.optional.misc;
+package optionals.learn.java8.optional.misc;
 
 import java.util.Optional;
 import java.util.Properties;

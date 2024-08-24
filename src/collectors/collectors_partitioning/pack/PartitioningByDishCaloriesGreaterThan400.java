@@ -1,7 +1,7 @@
-package src.collectors.collectors_partitioning.pack;
+package collectors.collectors_partitioning.pack;
 
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.List;
 import java.util.Map;

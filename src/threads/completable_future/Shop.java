@@ -1,4 +1,4 @@
-package src.threads.completable_future;
+package threads.completable_future;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;

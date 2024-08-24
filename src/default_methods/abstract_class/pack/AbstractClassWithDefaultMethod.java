@@ -1,4 +1,4 @@
-package src.default_methods.abstract_class.pack;
+package default_methods.abstract_class.pack;
 
 public abstract class AbstractClassWithDefaultMethod {
 

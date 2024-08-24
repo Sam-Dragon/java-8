@@ -1,6 +1,6 @@
-package src.collectors.collectors_summarization.pack;
+package collectors.collectors_summarization.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.List;
 import java.util.stream.Collectors;

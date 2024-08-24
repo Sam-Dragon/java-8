@@ -1,7 +1,7 @@
-package src.collectors.collectors_summarization.pack;
+package collectors.collectors_summarization.pack;
 
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.DoubleSummaryStatistics;
 import java.util.IntSummaryStatistics;

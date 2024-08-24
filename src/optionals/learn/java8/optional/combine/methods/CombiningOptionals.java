@@ -1,8 +1,8 @@
-package src.optionals.learn.java8.optional.combine.methods;
+package optionals.learn.java8.optional.combine.methods;
 
-import src.model.Car;
-import src.model.Insurance;
-import src.model.Person;
+import model.Car;
+import model.Insurance;
+import model.Person;
 
 import java.util.Optional;
 

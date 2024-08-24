@@ -1,6 +1,6 @@
-package src.streams.streams_features.pack;
+package streams.streams_features.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.stream.Stream;
 

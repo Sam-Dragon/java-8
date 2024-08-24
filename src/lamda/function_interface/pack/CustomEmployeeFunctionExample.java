@@ -1,6 +1,6 @@
-package src.lamda.function_interface.pack;
+package lamda.function_interface.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

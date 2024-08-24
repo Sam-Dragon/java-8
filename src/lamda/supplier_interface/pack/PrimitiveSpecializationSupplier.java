@@ -1,4 +1,4 @@
-package src.lamda.supplier_interface.pack;
+package lamda.supplier_interface.pack;
 
 import java.util.function.*;
 

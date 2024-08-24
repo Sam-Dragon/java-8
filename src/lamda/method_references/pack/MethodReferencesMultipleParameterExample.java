@@ -1,6 +1,6 @@
-package src.lamda.method_references.pack;
+package lamda.method_references.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.stream.Collectors;
 

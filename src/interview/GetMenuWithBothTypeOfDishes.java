@@ -1,7 +1,7 @@
-package src.interview;
+package interview;
 
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.List;
 import java.util.Map;

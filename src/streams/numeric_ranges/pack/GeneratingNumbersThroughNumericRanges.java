@@ -1,4 +1,4 @@
-package src.streams.numeric_ranges.pack;
+package streams.numeric_ranges.pack;
 
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;

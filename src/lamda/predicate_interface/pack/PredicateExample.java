@@ -1,6 +1,6 @@
-package src.lamda.predicate_interface.pack;
+package lamda.predicate_interface.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.math.BigDecimal;
 import java.util.function.Predicate;

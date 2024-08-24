@@ -1,7 +1,7 @@
-package src.collectors.collectors_reduction.pack;
+package collectors.collectors_reduction.pack;
 
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.List;
 import java.util.Optional;

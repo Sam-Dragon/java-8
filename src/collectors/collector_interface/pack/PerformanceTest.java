@@ -1,6 +1,6 @@
-package src.collectors.collector_interface.pack;
+package collectors.collector_interface.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.stream.Collectors;
 

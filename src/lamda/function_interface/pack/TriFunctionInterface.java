@@ -1,4 +1,4 @@
-package src.lamda.function_interface.pack;
+package lamda.function_interface.pack;
 
 import java.util.List;
 

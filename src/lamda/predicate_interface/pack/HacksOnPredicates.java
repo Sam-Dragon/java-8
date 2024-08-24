@@ -1,4 +1,4 @@
-package src.lamda.predicate_interface.pack;
+package lamda.predicate_interface.pack;
 
 import java.util.function.Predicate;
 

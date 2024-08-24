@@ -1,7 +1,7 @@
-package src.collectors.collectors_reduction.pack;
+package collectors.collectors_reduction.pack;
 
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Comparator;
 import java.util.List;

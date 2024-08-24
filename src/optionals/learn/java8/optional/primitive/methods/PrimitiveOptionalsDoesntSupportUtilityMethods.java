@@ -1,4 +1,4 @@
-package src.optionals.learn.java8.optional.primitive.methods;
+package optionals.learn.java8.optional.primitive.methods;
 
 import java.util.OptionalInt;
 

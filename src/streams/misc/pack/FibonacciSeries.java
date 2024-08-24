@@ -1,4 +1,4 @@
-package src.streams.misc.pack;
+package streams.misc.pack;
 
 import java.util.stream.Stream;
 

@@ -1,4 +1,4 @@
-package src.parallel_streams.conversion_streams.pack;
+package parallel_streams.conversion_streams.pack;
 
 import java.util.stream.Stream;
 

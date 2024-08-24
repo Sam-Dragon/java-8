@@ -1,4 +1,4 @@
-package src.optionals.learn.java8.optional.create.methods;
+package optionals.learn.java8.optional.create.methods;
 
 import java.util.Optional;
 

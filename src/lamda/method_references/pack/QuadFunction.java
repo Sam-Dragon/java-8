@@ -1,4 +1,4 @@
-package src.lamda.method_references.pack;
+package lamda.method_references.pack;
 
 @FunctionalInterface
 public interface QuadFunction<T, U, V, S, R> {

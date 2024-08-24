@@ -1,4 +1,4 @@
-package src.default_methods.multiple_inheritance.resoultion_rule_3.pack;
+package default_methods.multiple_inheritance.resoultion_rule_3.pack;
 
 public interface InterfaceWithDefaultAndStaticMethodsParentGrandFather {
 

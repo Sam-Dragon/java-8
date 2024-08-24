@@ -1,4 +1,4 @@
-package src.threads.creation;
+package threads.creation;
 
 public class ThreadClassImpl {
 

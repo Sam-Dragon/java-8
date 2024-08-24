@@ -1,4 +1,4 @@
-package src.lamda.consumer_interface.pack;
+package lamda.consumer_interface.pack;
 
 import java.util.function.BiConsumer;
 import java.util.function.ObjIntConsumer;

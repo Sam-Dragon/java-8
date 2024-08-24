@@ -1,6 +1,6 @@
-package src.lamda.method_references.pack;
+package lamda.method_references.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.math.BigDecimal;
 import java.util.function.Supplier;

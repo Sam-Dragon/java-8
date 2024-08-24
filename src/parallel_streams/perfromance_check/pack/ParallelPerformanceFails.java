@@ -1,4 +1,4 @@
-package src.parallel_streams.perfromance_check.pack;
+package parallel_streams.perfromance_check.pack;
 
 import java.util.function.Function;
 import java.util.stream.Stream;

@@ -1,4 +1,4 @@
-package src.parallel_streams.forkjoin.pack;
+package parallel_streams.forkjoin.pack;
 
 import java.util.Set;
 import java.util.TreeSet;

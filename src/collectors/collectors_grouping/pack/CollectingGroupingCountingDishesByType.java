@@ -1,6 +1,6 @@
-package src.collectors.collectors_grouping.pack;
+package collectors.collectors_grouping.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.Map;
 import java.util.stream.Collectors;

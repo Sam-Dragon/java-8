@@ -1,4 +1,4 @@
-package src.threads.completable_future;
+package threads.completable_future;
 
 import java.util.Arrays;
 import java.util.List;

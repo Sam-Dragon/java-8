@@ -1,6 +1,6 @@
-package src.streams.mapping.pack;
+package streams.mapping.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

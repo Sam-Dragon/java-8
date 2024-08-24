@@ -1,7 +1,7 @@
-package src.collectors.collectors_class.pack;
+package collectors.collectors_class.pack;
 
 
-import src.model.Employee;
+import model.Employee;
 
 import java.math.BigDecimal;
 import java.util.List;

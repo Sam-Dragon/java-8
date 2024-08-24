@@ -1,7 +1,7 @@
-package src.collectors.collectors_summarization.pack;
+package collectors.collectors_summarization.pack;
 
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.List;
 import java.util.stream.Collectors;

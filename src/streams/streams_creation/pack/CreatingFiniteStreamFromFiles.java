@@ -1,4 +1,4 @@
-package src.streams.streams_creation.pack;
+package streams.streams_creation.pack;
 
 import java.nio.charset.Charset;
 import java.nio.file.Files;

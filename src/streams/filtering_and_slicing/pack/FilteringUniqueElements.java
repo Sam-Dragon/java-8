@@ -1,6 +1,6 @@
-package src.streams.filtering_and_slicing.pack;
+package streams.filtering_and_slicing.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.stream.Collectors;
 

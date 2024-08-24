@@ -1,4 +1,4 @@
-package src.lamda.operator_interface.pack;
+package lamda.operator_interface.pack;
 
 public class CustomEmployeeOperatorExample {
 

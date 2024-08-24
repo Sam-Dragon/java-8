@@ -1,4 +1,4 @@
-package src.threads.creation;
+package threads.creation;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

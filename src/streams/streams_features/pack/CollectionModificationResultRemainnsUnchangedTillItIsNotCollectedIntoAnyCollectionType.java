@@ -1,4 +1,4 @@
-package src.streams.streams_features.pack;
+package streams.streams_features.pack;
 
 import java.util.Arrays;
 import java.util.List;

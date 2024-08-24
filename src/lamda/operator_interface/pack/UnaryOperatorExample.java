@@ -1,6 +1,6 @@
-package src.lamda.operator_interface.pack;
+package lamda.operator_interface.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.function.Function;
 import java.util.function.UnaryOperator;

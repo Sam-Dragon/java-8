@@ -1,6 +1,6 @@
-package src.streams.numeric_streams.pack;
+package streams.numeric_streams.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.OptionalDouble;
 import java.util.OptionalInt;

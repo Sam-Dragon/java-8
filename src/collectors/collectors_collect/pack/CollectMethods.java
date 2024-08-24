@@ -1,7 +1,7 @@
-package src.collectors.collectors_collect.pack;
+package collectors.collectors_collect.pack;
 
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package src.default_methods.default_method_lamda.pack;
+package default_methods.default_method_lamda.pack;
 
 public class ClassWithDefaultMethodInLamdaExpression implements InterfaceWithSingleDefaultMethod {
 

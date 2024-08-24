@@ -1,6 +1,6 @@
-package src.streams.reducing.pack;
+package streams.reducing.pack;
 
-import src.model.Dish;
+import model.Dish;
 
 import java.util.Optional;
 

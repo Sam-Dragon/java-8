@@ -1,4 +1,4 @@
-package src.model;
+package model;
 
 public class Insurance {
     private String name;

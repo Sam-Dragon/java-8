@@ -1,4 +1,4 @@
-package src.parallel_streams.parallelism_basics.pack;
+package parallel_streams.parallelism_basics.pack;
 
 import java.util.stream.Stream;
 

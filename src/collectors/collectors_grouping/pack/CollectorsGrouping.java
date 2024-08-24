@@ -1,7 +1,7 @@
-package src.collectors.collectors_grouping.pack;
+package collectors.collectors_grouping.pack;
 
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Collection;
 import java.util.List;

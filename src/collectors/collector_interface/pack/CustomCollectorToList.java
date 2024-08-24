@@ -1,4 +1,4 @@
-package src.collectors.collector_interface.pack;
+package collectors.collector_interface.pack;
 
 import java.util.*;
 import java.util.function.BiConsumer;

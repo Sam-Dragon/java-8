@@ -1,4 +1,4 @@
-package src.parallel_streams.misc.pack;
+package parallel_streams.misc.pack;
 
 public class ProcessorCount {
 

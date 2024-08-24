@@ -1,6 +1,6 @@
-package src.interview.misc;
+package interview.misc;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Collections;
 

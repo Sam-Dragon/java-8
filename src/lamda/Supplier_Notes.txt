@@ -1,5 +1,5 @@
 ******************************************* SUPPLIER ***********************************************
-[package src.lamda.supplier_interface.pack]
+[package lamda.supplier_interface.pack]
 
 1. Supplier accepts void but results Target type 
 2. Supplier function

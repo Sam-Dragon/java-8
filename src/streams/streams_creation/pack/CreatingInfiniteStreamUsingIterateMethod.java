@@ -1,4 +1,4 @@
-package src.streams.streams_creation.pack;
+package streams.streams_creation.pack;
 
 import java.util.stream.Stream;
 

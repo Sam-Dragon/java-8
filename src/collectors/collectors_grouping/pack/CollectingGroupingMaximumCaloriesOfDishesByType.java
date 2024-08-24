@@ -1,7 +1,7 @@
-package src.collectors.collectors_grouping.pack;
+package collectors.collectors_grouping.pack;
 
-import src.model.Dish;
-import src.model.Dish.Type;
+import model.Dish;
+import model.Dish.Type;
 
 import java.util.Comparator;
 import java.util.Map;

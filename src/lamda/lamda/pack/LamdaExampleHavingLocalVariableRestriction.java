@@ -1,4 +1,4 @@
-package src.lamda.lamda.pack;
+package lamda.lamda.pack;
 
 public class LamdaExampleHavingLocalVariableRestriction {
 

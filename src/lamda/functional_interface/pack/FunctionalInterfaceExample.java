@@ -1,6 +1,6 @@
-package src.lamda.functional_interface.pack;
+package lamda.functional_interface.pack;
 
-import src.model.Employee;
+import model.Employee;
 
 import java.util.Comparator;
 import java.util.List;

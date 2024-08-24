@@ -1,4 +1,4 @@
-package src.default_methods.default_static_method.pack;
+package default_methods.default_static_method.pack;
 
 public interface InterfaceWithDefaultAndStaticMethods {
 
