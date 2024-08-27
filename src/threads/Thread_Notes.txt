@@ -9,5 +9,24 @@
 # Thread Types
 - User Threads: Thread created programmatically & lifecycle is handled by programmer
 & terminates when program ends
-- Deamon Threads: Thread created programmatically & lifecycle cannot be handled by programmer
+- Daemon Threads: Thread created programmatically & lifecycle cannot be handled by programmer
 & are used for background process & it never ends
+
+# Deadlock
+- If resource is accessed by multiple threads & each thread waits for releasing lock of another
+results in locking the process
+
+# Deadlock areas
+- It can happen due to unnecessary locks
+- It can happen due to nested locks
+
+# Deadlock solutions
+- code well & test using multithreading
+- try using timeouts
+- join the threads if required
+- It can be programmatically terminated but still recursive in nature
+
+# Debugging
+- using commands like jcmd to check PID & kill if required
+- use thread dumps for analysis
+- try asynchronous way of execution
