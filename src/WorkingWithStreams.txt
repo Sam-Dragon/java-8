@@ -7,6 +7,8 @@ particular set
 # Filtering A Predicate
 - It accepts lamda expression & basically returns BOOLEAN value. Basically a PREDICATE
 - filter(Predicate p) is used
+- It works on single element 
+- It works on collection [using collection methods only]
 
 # Filtering Unique Elements
 - To remove duplicates elements 
@@ -23,11 +25,12 @@ particular set
 # Mapping
 - Basically, we will be selecting specified columns
 
-# Mapping a Function ***** YET TO ADD
+# Mapping a Function
 - It can be used to select a single column or all columns
 - It accepts lamda expression & basically returns object value. Basically a Function
 - map(Function f) is used
 - It skips optional values
+- It works on collection of collection as well
 > Disadvantage : We cannot select arbitrary or multiple columns
 > Special Case : Function can be replaced with PREDICATE or UNARY OPERATOR
 
