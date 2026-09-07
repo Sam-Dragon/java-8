@@ -126,5 +126,17 @@ not Optional<Integer>
     - range : the end value is exclusive
     - rangeClosed : the end value is inclusive
 
-# PENDING
-1. Chain allMatch, noneMatch, anyMatch & see the result
+# Building Streams
+- It is used for directly processing vales by putting into streams
+- Streams with values 
+  - It can be achieved using Stream.of(.. values ..)
+- Streams with Arrays
+  - It can be achieved using Arrays.stream(.. array ..)
+- Streams with Files
+  - It can be achieved using Files.lines(.. file, characterset ..)
+
+# Infinite Streams
+- It can be achieved using two methods: iterate() & generate()
+- It must be stopped with limit() function
+- Iterate is like for-loop, accepts (initial value, conditon [optional], Incrementor)
+- generate requires generator type like Math.random()
