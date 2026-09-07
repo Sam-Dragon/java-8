@@ -83,6 +83,8 @@ May not iterate the whole set until one condition matches
 # Reducing
 - Basically, we will be perform operations to achieve single value
 - It is also called as fold [because we keep performing iterations to get single value]
+- reduce(operation) is used for returning optional
+- reduce(initial value, operation) is used for returning value
 
 # Summing, Counting , Maximum & Minimum of elements
 - Basically performing mathematical operations such as addition, maximum, minimum, count etc.. 
