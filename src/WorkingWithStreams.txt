@@ -71,12 +71,14 @@ May not iterate the whole set until one condition matches
 - It basically returns optional<T> whether element is found or not
 - It must be used in parallel streams
 - findAny() is used
+- Use orElse() in conjunction to return a value instead of optional
 
 # Find First Element for Set
 - It gives the first matching element
 - It basically returns optional<T> whether element is found or not
 - It must be used in sequencial streams
 - findFirst() is used
+- Use orElse() in conjunction to return a value instead of optional
 
 # Reducing
 - Basically, we will be perform operations to achieve single value
