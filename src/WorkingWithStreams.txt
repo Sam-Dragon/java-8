@@ -30,16 +30,17 @@ particular set
 - It accepts lamda expression & basically returns object value. Basically a Function
 - map(Function f) is used
 - It skips optional values
-- It works on collection of collection as well
+- It works on collection of collection as well & ensures the it only transforms [wont shrink collection unlike flatMap]
 > Disadvantage : We cannot select arbitrary or multiple columns
 > Special Case : Function can be replaced with PREDICATE or UNARY OPERATOR
 
-# Flat Mapping a Function ***** YET TO ADD
+# Flat Mapping a Function 
 - It can be used to select a single column or all columns
 - It can also be used to flatten the streams i.e. Stream<Stream<String>> --> Stream<String>
 - It accepts lamda expression & basically returns object value. Basically a Function
 - flatMap(Function f) is used
 - It skips optional values
+- It works on collection of collection as well and trims down to single collection
 > Disadvantage : We cannot select arbitrary or multiple columns
 > Special Case : Function can be replaced with PREDICATE or UNARY OPERATOR
 
